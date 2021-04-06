@@ -1,5 +1,4 @@
-from connection.publisher import Publisher 
-from connection.topic import Topic
+from connection import Publisher, Topic
 
 pub = Publisher()
 topic = Topic()
