@@ -30,3 +30,7 @@
 *.exe
 *.out
 *.app
+
+# environment variables
+.env
+secrets.hpp

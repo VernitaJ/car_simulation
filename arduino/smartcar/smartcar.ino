@@ -1,9 +1,98 @@
+#if defined(__has_include) && __has_include("secrets.hpp")
+#include "secrets.hpp"
+#else
+#include "secrets-defaults.hpp"
+#endif
+#include <vector>
+#include <MQTT.h>
+#include <WiFi.h>
+#ifdef __SMCE__
+#include <OV767X.h>
+#endif
+
 #include <Smartcar.h>
 
-void setup() {
-  // put your setup code here, to run once:
+#ifndef __SMCE__
+WiFiClient net;
+#endif
+MQTTClient mqtt;
+ArduinoRuntime arduinoRuntime;
+BrushedMotor leftMotor(arduinoRuntime, smartcarlib::pins::v2::leftMotorPins);
+BrushedMotor rightMotor(arduinoRuntime, smartcarlib::pins::v2::rightMotorPins);
+DifferentialControl control(leftMotor, rightMotor);
+
+SimpleCar car(control);
+
+const auto oneSecond = 1000UL;
+const auto triggerPin = 6;
+const auto echoPin = 7;
+const auto maxDistance = 400;
+SR04 front(arduinoRuntime, triggerPin, echoPin, maxDistance);
+
+std::vector<char> frameBuffer;
+
+void setup()
+{
+    Serial.begin(9600);
+#ifdef __SMCE__
+    //int OV767X::begin(int resolution, int format, int fps)
+    Camera.begin(QVGA, RGB888, 60);
+    frameBuffer.resize(Camera.width() * Camera.height() * Camera.bytesPerPixel());
+    mqtt.begin(ip, port, WiFi);
+    // mqtt.begin(WiFi); // Will connect to localhost
+#else
+    mqtt.begin(net);
+#endif
+    if (mqtt.connect("arduino", user, pass))
+    {
+        mqtt.subscribe("/smartcar/control/#", 1);
+        mqtt.subscribe("test", 1);
+        mqtt.onMessage([](String topic, String message) {
+            if (topic == "/smartcar/control/throttle")
+            {
+                car.setSpeed(message.toInt());
+            }
+            else if (topic == "/smartcar/control/steering")
+            {
+                car.setAngle(message.toInt());
+            }
+            else
+            {
+                Serial.println(topic + " " + message);
+            }
+        });
+    }
 }
 
-void loop() {
-  // put your main code here, to run repeatedly:
+void loop()
+{
+    if (mqtt.connected())
+    {
+        mqtt.loop();
+        const auto currentTime = millis();
+#ifdef __SMCE__
+        static auto previousFrame = 0UL;
+        if (currentTime - previousFrame >= 65)
+        {
+            previousFrame = currentTime;
+            Camera.readFrame(frameBuffer.data());
+            mqtt.publish("test", frameBuffer.data(), frameBuffer.size(),
+                         false, 0);
+            mqtt.publish("/smartcar/camera", frameBuffer.data(), frameBuffer.size(),
+                         false, 0);
+        }
+#endif
+        static auto previousTransmission = 0UL;
+        if (currentTime - previousTransmission >= oneSecond)
+        {
+            previousTransmission = currentTime;
+            const auto distance = String(front.getDistance());
+            mqtt.publish("test", distance);
+            mqtt.publish("/smartcar/ultrasound/front", distance);
+        }
+    }
+#ifdef __SMCE__
+    // Avoid over-using the CPU if we are running in the emulator
+    delay(35);
+#endif
 }
