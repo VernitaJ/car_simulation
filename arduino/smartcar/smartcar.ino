@@ -76,8 +76,6 @@ void loop()
         {
             previousFrame = currentTime;
             Camera.readFrame(frameBuffer.data());
-            mqtt.publish("test", frameBuffer.data(), frameBuffer.size(),
-                         false, 0);
             mqtt.publish("/smartcar/camera", frameBuffer.data(), frameBuffer.size(),
                          false, 0);
         }
@@ -87,7 +85,6 @@ void loop()
         {
             previousTransmission = currentTime;
             const auto distance = String(front.getDistance());
-            mqtt.publish("test", distance);
             mqtt.publish("/smartcar/ultrasound/front", distance);
         }
     }

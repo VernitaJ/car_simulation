@@ -1,8 +1,9 @@
-from connection import Publisher, Topic
+from connection import connecter, Topic
+from controls import Keyboard
 
-pub = Publisher()
 topic = Topic()
 
-pub.start()
+c = Keyboard()
 
-pub.send(topic.test, "hello world!")
+while True:
+    pass

@@ -34,3 +34,9 @@
 # environment variables
 .env
 secrets.hpp
+
+# vsc
+.vscode
+
+# python
+__pycache__
