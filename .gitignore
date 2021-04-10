@@ -30,3 +30,18 @@
 *.exe
 *.out
 *.app
+
+# environment variables
+.env
+secrets.hpp
+
+# vsc
+.vscode
+
+# python
+__pycache__
+
+# misc
+test.ino
+local.py
+.car
