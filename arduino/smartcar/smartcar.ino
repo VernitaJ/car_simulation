@@ -4,7 +4,6 @@
 #include "./secrets-defaults.hpp"
 #endif
 #include "./topics.hpp"
-#include "./utils.hpp"
 #include <vector>
 #include <MQTT.h>
 #include <WiFi.h>
@@ -124,6 +123,28 @@ void obstacleDetection(long currentTime)
             allowForward = true;
         }
     }
+}
+
+boolean checkSensor(int sensorData, int max)
+{
+    if (0 < sensorData && sensorData < max)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+
+int msgToInt(String msg)
+{
+    return msg.toInt();
+}
+
+void println(String msg)
+{
+    Serial.println(msg);
 }
 
 boolean connected()

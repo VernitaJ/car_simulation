@@ -1,4 +1,4 @@
-String forward = "/smartcar/control/throttle/forward";
-String reverse = "/smartcar/control/throttle/reverse";
-String left = "/smartcar/control/steering/left";
-String right = "/smartcar/control/steering/right";
+const String forward = "/smartcar/control/throttle/forward";
+const String reverse = "/smartcar/control/throttle/reverse";
+const String left = "/smartcar/control/steering/left";
+const String right = "/smartcar/control/steering/right";
