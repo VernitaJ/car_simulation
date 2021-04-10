@@ -36,10 +36,10 @@
 secrets.hpp
 
 # vsc
-.vscode
+.vscode/
 
 # python
-__pycache__
+__pycache__/
 
 # misc
 test.ino
