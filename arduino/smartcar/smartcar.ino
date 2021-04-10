@@ -1,13 +1,13 @@
-// #if defined(__has_include) && __has_include("./secrets.hpp")
-// #include "./secrets.hpp"
-// #else
-// #include "./secrets-defaults.hpp"
-// #endif
-
-#ifdef __SMCE__
+#if defined(__has_include) && __has_include("./secrets.hpp")
+#include "./secrets.hpp"
+#else
+#include "./secrets-defaults.hpp"
+#endif
 #include <vector>
 #include <MQTT.h>
 #include <WiFi.h>
+
+#ifdef __SMCE__
 #include <OV767X.h>
 #endif
 
@@ -25,10 +25,10 @@ DifferentialControl control(leftMotor, rightMotor);
 SimpleCar car(control);
 
 // CI you are are gandalf I am belrog
-const char user[] = "public";
-const char pass[] = "public";
-const char ip[] = "127.0.0.1";
-const int port = 1883;
+// const char user[] = "public";
+// const char pass[] = "public";
+// const char ip[] = "127.0.0.1";
+// const int port = 1883;
 
 const auto oneSecond = 1000UL;
 const auto safetyTime = 100UL;
