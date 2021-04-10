@@ -3,11 +3,11 @@
 // #else
 // #include "./secrets-defaults.hpp"
 // #endif
+
+#ifdef __SMCE__
 #include <vector>
 #include <MQTT.h>
 #include <WiFi.h>
-
-#ifdef __SMCE__
 #include <OV767X.h>
 #endif
 
