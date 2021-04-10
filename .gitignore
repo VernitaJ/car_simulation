@@ -40,3 +40,8 @@ secrets.hpp
 
 # python
 __pycache__
+
+# misc
+test.ino
+local.py
+.car

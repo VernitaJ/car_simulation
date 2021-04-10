@@ -1,11 +1,12 @@
-#if defined(__has_include) && __has_include("secrets.hpp")
-#include "secrets.hpp"
+#if defined(__has_include) && __has_include("./secrets.hpp")
+#include "./secrets.hpp"
 #else
-#include "secrets-defaults.hpp"
+#include "./secrets-defaults.hpp"
 #endif
 #include <vector>
 #include <MQTT.h>
 #include <WiFi.h>
+
 #ifdef __SMCE__
 #include <OV767X.h>
 #endif
@@ -24,20 +25,26 @@ DifferentialControl control(leftMotor, rightMotor);
 SimpleCar car(control);
 
 const auto oneSecond = 1000UL;
+const auto safetyTime = 100UL;
 const auto triggerPin = 6;
 const auto echoPin = 7;
 const auto maxDistance = 400;
-SR04 front(arduinoRuntime, triggerPin, echoPin, maxDistance);
+const auto redFrontPin = 0;
 
-std::vector<char> frameBuffer;
+boolean allowForward = true;
+int safetySpeed = 0;
+SR04 front(arduinoRuntime, triggerPin, echoPin, maxDistance);
+GP2D120 frontIR(arduinoRuntime, redFrontPin);
+
+//std::vector<char> frameBuffer;
 
 void setup()
 {
     Serial.begin(9600);
 #ifdef __SMCE__
     //int OV767X::begin(int resolution, int format, int fps)
-    Camera.begin(QVGA, RGB888, 60);
-    frameBuffer.resize(Camera.width() * Camera.height() * Camera.bytesPerPixel());
+    // Camera.begin(QVGA, RGB888, 60);
+    // frameBuffer.resize(Camera.width() * Camera.height() * Camera.bytesPerPixel());
     mqtt.begin(ip, port, WiFi);
     // mqtt.begin(WiFi); // Will connect to localhost
 #else
@@ -46,50 +53,98 @@ void setup()
     if (mqtt.connect("arduino", user, pass))
     {
         mqtt.subscribe("/smartcar/control/#", 1);
-        mqtt.subscribe("test", 1);
         mqtt.onMessage([](String topic, String message) {
-            if (topic == "/smartcar/control/throttle")
-            {
-                car.setSpeed(message.toInt());
-            }
-            else if (topic == "/smartcar/control/steering")
-            {
-                car.setAngle(message.toInt());
-            }
-            else
-            {
-                Serial.println(topic + " " + message);
-            }
+            handleInput(topic, message);
         });
     }
 }
 
 void loop()
 {
-    if (mqtt.connected())
+    if (connected())
     {
         mqtt.loop();
         const auto currentTime = millis();
-#ifdef __SMCE__
-        static auto previousFrame = 0UL;
-        if (currentTime - previousFrame >= 65)
-        {
-            previousFrame = currentTime;
-            Camera.readFrame(frameBuffer.data());
-            mqtt.publish("/smartcar/camera", frameBuffer.data(), frameBuffer.size(),
-                         false, 0);
-        }
-#endif
-        static auto previousTransmission = 0UL;
-        if (currentTime - previousTransmission >= oneSecond)
-        {
-            previousTransmission = currentTime;
-            const auto distance = String(front.getDistance());
-            mqtt.publish("/smartcar/ultrasound/front", distance);
-        }
+        obstacleDetection(currentTime);
     }
 #ifdef __SMCE__
     // Avoid over-using the CPU if we are running in the emulator
     delay(35);
 #endif
+}
+
+void handleInput(String topic, String message)
+{
+
+    if (topic == "/smartcar/control/throttle/forward" && allowForward)
+    {
+        car.setSpeed(message.toInt());
+    }
+    else if (topic == "/smartcar/control/throttle/reverse")
+    {
+        car.setSpeed(message.toInt());
+    }
+    else if (topic == "/smartcar/control/steering/left")
+    {
+        car.setAngle(message.toInt());
+    }
+    else if (topic == "/smartcar/control/steering/right")
+    {
+        car.setAngle(message.toInt());
+    }
+    else
+    {
+        println("imput ignored:");
+        println(topic + " " + message);
+    }
+}
+
+// object dection implementation
+void obstacleDetection(long currentTime)
+{
+    static auto previousCheck = 0UL;
+    if (currentTime - previousCheck >= safetyTime)
+    {
+        previousCheck = currentTime;
+        const auto sonicDistance = String(front.getDistance()).toInt();
+        const auto IRdistance = String(frontIR.getMedianDistance()).toInt();
+        if (checkSensor(sonicDistance, 200))
+        {
+            if (allowForward)
+            {
+                allowForward = false;
+                speed(0);
+            }
+        }
+        else
+        {
+            allowForward = true;
+        }
+    }
+}
+
+boolean checkSensor(int sensorData, int max)
+{
+    if (0 < sensorData && sensorData < max)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+
+boolean connected()
+{
+    return mqtt.connected();
+}
+
+void speed(int speed)
+{
+    car.setSpeed(speed);
+}
+void println(String msg)
+{
+    Serial.println(msg);
 }
