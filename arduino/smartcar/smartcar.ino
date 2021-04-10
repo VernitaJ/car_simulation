@@ -3,6 +3,8 @@
 #else
 #include "./secrets-defaults.hpp"
 #endif
+#include "./topics.hpp"
+#include "./utils.hpp"
 #include <vector>
 #include <MQTT.h>
 #include <WiFi.h>
@@ -24,12 +26,6 @@ DifferentialControl control(leftMotor, rightMotor);
 
 SimpleCar car(control);
 
-// CI you are are gandalf I am belrog
-// const char user[] = "public";
-// const char pass[] = "public";
-// const char ip[] = "127.0.0.1";
-// const int port = 1883;
-
 const auto oneSecond = 1000UL;
 const auto safetyTime = 100UL;
 const auto triggerPin = 6;
@@ -37,8 +33,10 @@ const auto echoPin = 7;
 const auto maxDistance = 400;
 const auto redFrontPin = 0;
 
+// safety variables
 boolean allowForward = true;
 int safetySpeed = 0;
+
 SR04 front(arduinoRuntime, triggerPin, echoPin, maxDistance);
 GP2D120 frontIR(arduinoRuntime, redFrontPin);
 
@@ -81,27 +79,26 @@ void loop()
 
 void handleInput(String topic, String message)
 {
-
-    if (topic == "/smartcar/control/throttle/forward" && allowForward)
+    int msg = msgToInt(message);
+    if (topic == forward && allowForward)
     {
-        car.setSpeed(message.toInt());
+        car.setSpeed(msg);
     }
-    else if (topic == "/smartcar/control/throttle/reverse")
+    else if (topic == reverse)
     {
-        car.setSpeed(message.toInt());
+        car.setSpeed(msg);
     }
-    else if (topic == "/smartcar/control/steering/left")
+    else if (topic == left)
     {
-        car.setAngle(message.toInt());
+        car.setAngle(msg);
     }
-    else if (topic == "/smartcar/control/steering/right")
+    else if (topic == right)
     {
-        car.setAngle(message.toInt());
+        car.setAngle(msg);
     }
     else
     {
-        println("imput ignored:");
-        println(topic + " " + message);
+        println("imput ignored: " + topic + " " + message);
     }
 }
 
@@ -129,18 +126,6 @@ void obstacleDetection(long currentTime)
     }
 }
 
-boolean checkSensor(int sensorData, int max)
-{
-    if (0 < sensorData && sensorData < max)
-    {
-        return true;
-    }
-    else
-    {
-        return false;
-    }
-}
-
 boolean connected()
 {
     return mqtt.connected();
@@ -149,8 +134,4 @@ boolean connected()
 void speed(int speed)
 {
     car.setSpeed(speed);
-}
-void println(String msg)
-{
-    Serial.println(msg);
 }
