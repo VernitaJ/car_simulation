@@ -32,42 +32,26 @@ public class MainActivity extends AppCompatActivity {
     private static final int QOS = 1;
     private static final int IMAGE_WIDTH = 320;
     private static final int IMAGE_HEIGHT = 240;
+    String broker = "tcp://46.101.108.246";
 
-    private MqttClient mMqttClient;
-    private boolean isConnected = false;
-    private ImageView mCameraView;
-    Connector connector = new Connector();
+    String username = "sauce";
+    String password = "sauce";
+
+    Connector connector = new Connector(username, password);
+
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        mCameraView = findViewById(R.id.imageView);
+        this.connector.connect();
 
-        connector.connect();
     }
-
-    @Override
-    protected void onResume() {
-        super.onResume();
-
-        connector.connect();
-    }
-
-
 
     void drive(String throttleSpeed, String steeringAngle, String actionDescription)  {
-
-        try {
-            connector.mqtt.publish(THROTTLE_CONTROL, new MqttMessage(throttleSpeed.getBytes()));
-            connector.mqtt.publish(STEERING_CONTROL, new MqttMessage(steeringAngle.getBytes()));
-        } catch (MqttException e) {
-            e.printStackTrace();
-        }
-
-
-
+        connector.publish(THROTTLE_CONTROL, throttleSpeed, 2);
+        connector.publish(STEERING_CONTROL, steeringAngle,2);
     }
 
     public void moveForward(View view) {
