@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">smartcar_interface</string>
+    <string name="upp">Upp</string>
+    <string name="right">Right</string>
+    <string name="down">Down</string>
+    <string name="left">Left</string>
 </resources>
