@@ -45,3 +45,9 @@ __pycache__/
 test.ino
 local.py
 .car
+.idea
+
+# Default ignored files
+/shelf/
+/workspace.xml
+/build
