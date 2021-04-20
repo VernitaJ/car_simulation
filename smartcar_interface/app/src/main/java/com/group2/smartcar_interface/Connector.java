@@ -1,4 +1,4 @@
-package com.group2.smartcar_interface;
+package Controls;
 
 import org.eclipse.paho.client.mqttv3.*;
 
@@ -11,34 +11,28 @@ public class Connector implements MqttCallback {
     String message = "";
     int qos = 2;
     String broker = "tcp://46.101.108.246";
-
+    int port = 1883;
     String username = "sauce";
     String password = "sauce";
     String clientId = "";
-    int port = 1883;
-    MqttClient mqtt;
 
+    MqttClient mqtt = new MqttClient(broker, "clientOne");
 
-    public Connector(String username, String password) {
+    public Connector() throws MqttException {
+        this.broker = broker;
+        this.topic = topic;
         this.username = username;
         this.password = password;
-
-        try {
-            this.mqtt = new MqttClient(this.broker , "client");
-        } catch (MqttException e) {
-            e.printStackTrace();
-        }
-
     }
 
     static final Boolean subscriber = true;
     static final Boolean publisher = true;
 
-    /*public static void main(String[] args) throws MqttException {
+    public static void main(String[] args) throws MqttException {
         Connector connector = new Connector();
         connector.connect();
     }
-*/
+
     public void connect(){
         // setup MQTT Client
         String clientID = "clientConnection";
@@ -59,7 +53,6 @@ public class Connector implements MqttCallback {
             System.exit(-1);
         }
         System.out.println("Connected to BROKER");
-        testClient();
     }
 
     public void disconnect() throws MqttException {
@@ -90,10 +83,11 @@ public class Connector implements MqttCallback {
         }
     }
 
-    public void publish(String topic, String message, int qos) {
+    public void publish(String topic, String message, int qos, IMqttActionListener publishCallback) {
         MqttMessage mqttMessage = new MqttMessage();
         mqttMessage.setPayload(message.getBytes());
         mqttMessage.setQos(qos);
+
         try {
             mqtt.publish(topic, mqttMessage);
         } catch (MqttException e) {
@@ -116,7 +110,6 @@ public class Connector implements MqttCallback {
                 MqttDeliveryToken token = null;
                 try {
                     // publish message to broker
-                    mqtt.publish("testing", message);
                     // Wait until the message has been delivered to the broker
                     token.waitForCompletion();
                     Thread.sleep(100);
