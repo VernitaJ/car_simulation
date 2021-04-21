@@ -9,7 +9,7 @@ sys.path.insert(0, parent_dir_path)
 IDLE = 0
 STRAIGHT = 0
 VELOCITY = 100
-DIRECTION = 50
+DIRECTION = 35
 MQTT = connecter.create("Car")
 TOPIC = Topic()
 
