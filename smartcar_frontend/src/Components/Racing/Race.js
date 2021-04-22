@@ -1,8 +1,6 @@
 import { ReactComponent, Component } from "react";
 import React, { useState, useEffect } from "react";
-import Controller from "./Controller";
 import Joystick from "./Joystick";
-import Gamepad from "react-gamepad";
 import "./Race.css";
 
 class Race extends Component {
