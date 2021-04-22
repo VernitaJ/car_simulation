@@ -1,5 +1,5 @@
 .Home-logo {
-  width: 50vh;
+  width: 30vh;
   height: auto;
   pointer-events: none;
 }
@@ -12,7 +12,7 @@
 }
 
 .Home-logo-text {
-  font-size: 5vh;
+  font-size: 3vh;
   margin-bottom: 0px;
 }
 

@@ -1,6 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import logo from "../logo.png";
+import logo from "../../logo.png";
 import "./Home.css";
 import Difficulty from "./Difficulty";
 
@@ -14,7 +14,6 @@ class HomeComponent extends React.Component {
 
   onClick = () => {
     if (!this.state.difficulty) {
-      console.log("true");
       this.setState({ difficulty: true });
     } else this.setState({ difficulty: false });
   };
