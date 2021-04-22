@@ -1,8 +1,5 @@
 import { ReactComponent, Component } from "react";
 import React, { useState, useEffect } from "react";
-import Controller from "./Controller";
-import Joystick from "./Joystick";
-import Gamepad from "react-gamepad";
 import "./Race.css";
 
 class Race extends Component {
@@ -34,16 +31,6 @@ class Race extends Component {
     return (
       <div>
         <div className="race-screen">Stream will go here</div>
-        <Joystick
-          title="Static 1"
-          width={250}
-          height={250}
-          options={{
-            mode: "static",
-            color: "green",
-            position: { top: "80%", left: "50%" },
-          }}
-        />
       </div>
     );
   }
