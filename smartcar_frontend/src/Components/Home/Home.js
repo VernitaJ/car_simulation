@@ -25,29 +25,33 @@ class HomeComponent extends React.Component {
           <img src={logo} className="Home-logo" alt="logo" />
           <h1 className="Home-logo-text">SmartCar Shield</h1>
         </header>
-        <ul className="Home-link">
+        <NavLink className="active" to="/race">
+          <div className="Home-link">
           <li className="Home-linkItem">
-            <NavLink className="active" to="/race">
               Race
-            </NavLink>
           </li>
+          </div>
+        </NavLink>
+        <NavLink className="active" to="/LeaderBoard">
+          <div className="Home-link">
           <li className="Home-linkItem">
-            <NavLink className="active" to="/leaderboard">
-              LeaderBoard
-            </NavLink>
+              Leaderboard
           </li>
+          </div>
+        </NavLink>
+        <NavLink className="active" to="/race_times">
+          <div className="Home-link">
           <li className="Home-linkItem">
-            <NavLink className="active" to="/race_times">
-              Race Times
-            </NavLink>
+              Race times
           </li>
-          <li className="Home-linkItem" onClick={this.onClick}>
+          </div>
+        </NavLink>
+          <li className="Difficulty" onClick={this.onClick}>
             Difficulty : {this.state.difficultyLevel}
             {this.state.difficulty ? (
               <Difficulty onSelectDiff={this.handleDifficulty} />
             ) : null}
           </li>
-        </ul>
       </div>
     );
   }

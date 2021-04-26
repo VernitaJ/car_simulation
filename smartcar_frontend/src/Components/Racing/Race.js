@@ -7,16 +7,6 @@ class Race extends Component {
     return (
       <div>
         <div className="race-screen">Stream will go here</div>
-        <Joystick
-          title="Static 1"
-          width={250}
-          height={250}
-          options={{
-            mode: "static",
-            color: "green",
-            position: { top: "80%", left: "50%" },
-          }}
-        />
       </div>
     );
   }
