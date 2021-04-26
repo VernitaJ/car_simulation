@@ -18,12 +18,32 @@
 WiFiClient net;
 #endif
 MQTTClient mqtt;
+
+
 ArduinoRuntime arduinoRuntime;
 BrushedMotor leftMotor(arduinoRuntime, smartcarlib::pins::v2::leftMotorPins);
 BrushedMotor rightMotor(arduinoRuntime, smartcarlib::pins::v2::rightMotorPins);
 DifferentialControl control(leftMotor, rightMotor);
 
-SimpleCar car(control);
+GY50 gyroscope(arduinoRuntime, 37);
+
+const auto pulsesPerMeter = 600;
+
+DirectionlessOdometer leftOdometer{
+    arduinoRuntime,
+    smartcarlib::pins::v2::leftOdometerPin,
+    []() { leftOdometer.update(); },
+    pulsesPerMeter};
+DirectionlessOdometer rightOdometer{
+    arduinoRuntime,
+    smartcarlib::pins::v2::rightOdometerPin,
+    []() { rightOdometer.update(); },
+    pulsesPerMeter};
+
+
+
+//SimpleCar car(control);
+SmartCar car(arduinoRuntime, control, gyroscope, leftOdometer, rightOdometer);
 
 const auto oneSecond = 1000UL;
 const auto safetyTime = 100UL;
@@ -31,13 +51,20 @@ const auto triggerPin = 6;
 const auto echoPin = 7;
 const auto maxDistance = 400;
 const auto redFrontPin = 0;
+const auto redRearPin = 3;
 
 // safety variables
 boolean allowForward = true;
+boolean allowBackward = true;
+boolean overrideAngle = false;
+boolean  overrideSpeed = false;
 int safetySpeed = 0;
 
+
+//Sensor Setup
 SR04 front(arduinoRuntime, triggerPin, echoPin, maxDistance);
 GP2D120 frontIR(arduinoRuntime, redFrontPin);
+GP2D120 rearIR(arduinoRuntime, redRearPin);
 
 std::vector<char> frameBuffer;
 
@@ -77,6 +104,7 @@ void loop()
     }
 #endif
         obstacleDetection(currentTime);
+
     }
 #ifdef __SMCE__
     // Avoid over-using the CPU if we are running in the emulator
@@ -85,12 +113,13 @@ void loop()
 }
 void handleInput(String topic, String message)
 {
+
     int msg = msgToInt(message);
     if (topic == forward && allowForward)
     {
         car.setSpeed(msg);
     }
-    else if (topic == reverse)
+    else if (topic == reverse && allowBackward)
     {
         car.setSpeed(msg);
     }
@@ -104,6 +133,7 @@ void handleInput(String topic, String message)
     }
     else
     {
+        autodriver(topic, message);
         println("imput ignored: " + topic + " " + message);
     }
 }
@@ -116,32 +146,53 @@ void obstacleDetection(long currentTime)
     {
         previousCheck = currentTime;
         const auto sonicDistance = String(front.getDistance()).toInt();
-        const auto IRdistance = String(frontIR.getMedianDistance()).toInt();
-        if (checkSensor(sonicDistance, 200))
+        //const auto IRdistance = String(frontIR.getMedianDistance()).toInt();
+        const auto IRdistance = String(rearIR.getMedianDistance()).toInt();
+        if(checkSensor(sonicDistance, 200))
         {
-            if (allowForward)
+            if(allowForward)
             {
-                allowForward = false;
-                speed(0);
+                car.setSpeed(0);
             }
+            allowForward = false;
         }
         else
         {
             allowForward = true;
         }
+      
+        if(checkSensor(IRdistance, 15))
+        {
+            //println(String(IRdistance));
+            if(allowBackward)
+            {
+                car.setSpeed(0);
+            }
+            allowBackward = false;
+        }
+        else
+        {
+            allowBackward = true;
+        }
+         
     }
 }
 
 boolean checkSensor(int sensorData, int max)
 {
-    if (0 < sensorData && sensorData < max)
-    {
-        return true;
-    }
-    else
-    {
-        return false;
-    }
+    return (0 < sensorData && sensorData < max);
+}
+boolean autodriver(String topic, String message){
+        if (topic == forward || topic == reverse)
+        {
+            car.setSpeed(-(message.toInt()));
+            println(String(-(message.toInt())));
+        }
+        if(topic == "/smartcar/control/steering/#")
+        {
+            car.setAngle((message.toInt()));
+        }
+    return false;
 }
 
 int msgToInt(String msg)

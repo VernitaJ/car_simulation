@@ -6,6 +6,7 @@ import LeaderBoard from "./components/leaderboard/LeaderBoard";
 import Home from "./pages/home/Home";
 import Times from "./components/Times";
 
+
 function App() {
   return (
     <div className="App">
@@ -14,6 +15,7 @@ function App() {
         <Route exact path="/race" component={Race} />
         <Route exact path="/leaderboard" component={LeaderBoard} />
         <Route exact path="/race_times" component={Times} />
+
       </Router>
     </div>
   );
