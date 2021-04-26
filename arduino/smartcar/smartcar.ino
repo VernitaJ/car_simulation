@@ -66,15 +66,15 @@ SR04 front(arduinoRuntime, triggerPin, echoPin, maxDistance);
 GP2D120 frontIR(arduinoRuntime, redFrontPin);
 GP2D120 rearIR(arduinoRuntime, redRearPin);
 
-//std::vector<char> frameBuffer;
+std::vector<char> frameBuffer;
 
 void setup()
 {
     Serial.begin(9600);
 #ifdef __SMCE__
     //int OV767X::begin(int resolution, int format, int fps)
-    // Camera.begin(QVGA, RGB888, 60);
-    // frameBuffer.resize(Camera.width() * Camera.height() * Camera.bytesPerPixel());
+    Camera.begin(QVGA, RGB888, 60);
+    frameBuffer.resize(Camera.width() * Camera.height() * Camera.bytesPerPixel());
     mqtt.begin(ip, port, WiFi);
     // mqtt.begin(WiFi); // Will connect to localhost
 #else
@@ -95,6 +95,14 @@ void loop()
     {
         mqtt.loop();
         const auto currentTime = millis();
+#ifdef __SMCE__
+        static auto previousFrame = 0UL;
+        if (currentTime - previousFrame >= 65) {
+        previousFrame = currentTime;
+        Camera.readFrame(frameBuffer.data());
+        mqtt.publish("/smartcar/camera", frameBuffer.data(), frameBuffer.size(), false, 0);
+    }
+#endif
         obstacleDetection(currentTime);
 
     }
@@ -103,7 +111,6 @@ void loop()
     delay(35);
 #endif
 }
-
 void handleInput(String topic, String message)
 {
 

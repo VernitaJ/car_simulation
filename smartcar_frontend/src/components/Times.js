@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
-import "./Home/Home.css";
+import "../pages/home/Home.css";
 
-//const LeaderBoardList = "";
+const TimeList = "";
 
-const LeaderBoard = () => {
+const Times = (props) => {
   // useEffect(() => {
-  //   fetch(LeaderBoardList)
+  //   fetch(TimeList)
   //     .then((response) => response.json())
   //     .then((users) => setUsers(users))
   //     .catch((err) => console.error(err));
@@ -13,7 +13,7 @@ const LeaderBoard = () => {
 
   return (
     <div>
-      <h2 className="leaderboard-heading">Leaderboard</h2>
+      <h2 className="times-heading">Times</h2>
       <ul>
         <li></li>
       </ul>
@@ -21,4 +21,4 @@ const LeaderBoard = () => {
   );
 };
 
-export default LeaderBoard;
+export default Times;

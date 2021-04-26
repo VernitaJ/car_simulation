@@ -1,8 +1,12 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+<<<<<<< HEAD:smartcar_frontend/src/pages/home/Home.js
+import logo from "../../resources/logo.png";
+=======
 import logo from "../../logo.png";
+>>>>>>> 7d85ea1ccc8ed221eda19412acdb17201377c543:smartcar_frontend/src/components/race/Home/Home.js
 import "./Home.css";
-import Difficulty from "./Difficulty";
+import Difficulty from "../../components/difficulty/Difficulty";
 
 class HomeComponent extends React.Component {
   state = { difficulty: false, difficultyLevel: "Easy" };
