@@ -1,11 +1,11 @@
 import React from "react";
 import { Route, BrowserRouter as Router, NavLink } from "react-router-dom";
 import "./style/App.css";
-import { Race } from "./components/Race";
-import LeaderBoard from "./components/LeaderBoard";
-import Home from "./components/Home";
+import { Race } from "./components/race/Race";
+import LeaderBoard from "./components/leaderboard/LeaderBoard";
+import Home from "./pages/home/Home";
 import Times from "./components/Times";
-import Settings from "./components/Settings";
+import Settings from "./components/difficulty/DifficultyOptions";
 
 function App() {
   return (

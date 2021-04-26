@@ -1,5 +1,5 @@
 import React from "react";
-import "./Settings.css";
+import "./DifficultyOptions.css";
 
 const Settings = () => {
   const [difficulty, setDifficulty] = React.useState(false);
