@@ -1,17 +1,15 @@
 import React from "react";
 import { Route, BrowserRouter as Router, NavLink } from "react-router-dom";
-import "./App.css";
-import { Race } from "./Components/Race";
-import LeaderBoard from "./Components/LeaderBoard";
-import Home from "./Components/Home";
-import Times from "./Components/Times";
-import Settings from "./Components/Settings";
-import Camera from "./Components/camera/Camera"
+import "./style/App.css";
+import { Race } from "./components/Race";
+import LeaderBoard from "./components/LeaderBoard";
+import Home from "./components/Home";
+import Times from "./components/Times";
+import Settings from "./components/Settings";
 
 function App() {
   return (
     <div className="App">
-      <Camera />
       <Router>
         <Route exact path="/" component={Home} />
         <Route exact path="/race" component={Race} />
