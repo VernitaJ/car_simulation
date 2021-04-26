@@ -5,7 +5,6 @@ import { Race } from "./components/race/Race";
 import LeaderBoard from "./components/leaderboard/LeaderBoard";
 import Home from "./pages/home/Home";
 import Times from "./components/Times";
-import Settings from "./components/difficulty/DifficultyOptions";
 
 function App() {
   return (
@@ -15,7 +14,6 @@ function App() {
         <Route exact path="/race" component={Race} />
         <Route exact path="/leaderboard" component={LeaderBoard} />
         <Route exact path="/race_times" component={Times} />
-        <Route exact path="/settings" component={Settings} />
       </Router>
     </div>
   );
