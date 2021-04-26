@@ -15,17 +15,16 @@ const Camera = () => {
     for (let y = 0; y < HEIGHT; y += 4) {
       for (let x = 0; x < WIDTH; x += 4) {
         const i = y * WIDTH + x;
-        let r = (pixels[i] = message[3 * i]); // red
-        let g = (pixels[i + 1] = message[3 * i + 1]); // green
-        let b = (pixels[i + 2] = message[3 * i + 2]); // blue
-        let a = (pixels[i + 3] = 255);
+        pixels[i] = message[3 * i];         // red
+        pixels[i + 1] = message[3 * i + 1]; // green
+        pixels[i + 2] = message[3 * i + 2]; // blue
+        pixels[i + 3] = 255;                // alpha
       }
     }
-    // }
     const imageData = new ImageData(pixels, WIDTH, HEIGHT);
     ctx.putImageData(imageData, 0, 0);
   });
-  return <canvas id="canvas" />;
+  return <canvas id = "canvas" />;
 };
 
 export default Camera;

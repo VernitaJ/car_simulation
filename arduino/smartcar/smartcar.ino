@@ -67,7 +67,7 @@ void setup()
 {
     Serial.begin(9600);
 #ifdef __SMCE__
-    int OV767X::begin(int resolution, int format, int fps)
+   // int OV767X::begin(int resolution, int format, int fps)
     Camera.begin(QVGA, RGB888, 60);
     frameBuffer.resize(Camera.width() * Camera.height() * Camera.bytesPerPixel());
     mqtt.begin("127.0.0.1", 1883, WiFi);
