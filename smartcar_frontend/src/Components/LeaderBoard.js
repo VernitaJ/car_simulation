@@ -1,21 +1,45 @@
 import React, { useState, useEffect } from "react";
-import "./Home/Home.css";
+import "./LeaderBoard.css";
 
 //const LeaderBoardList = "";
 
 const LeaderBoard = () => {
-  // useEffect(() => {
-  //   fetch(LeaderBoardList)
-  //     .then((response) => response.json())
-  //     .then((users) => setUsers(users))
-  //     .catch((err) => console.error(err));
-  // }, []);
+  const [user1, setuser1] = useState("user")
 
   return (
     <div>
       <h2 className="leaderboard-heading">Leaderboard</h2>
       <ul>
-        <li></li>
+        <li>
+          <span class="number">1 </span>
+          <span class="name" onClick={()=>setuser1("it changed")}>{user1} </span>
+          <span class="time">time </span>
+        </li>
+        <li>
+          <span class="number">2 </span>
+          <span class="name">user </span>
+          <span class="time">time </span>
+        </li>
+        <li>
+          <span class="number">3 </span>
+          <span class="name">user </span>
+          <span class="time">time </span>
+        </li>
+        <li>
+          <span class="number">4 </span>
+          <span class="name">user </span>
+          <span class="time">time </span>
+        </li>
+        <li>
+          <span class="number">5 </span>
+          <span class="name">user </span>
+          <span class="time">time </span>
+        </li>
+        <li>
+          <span class="number">6 </span>
+          <span class="name">user </span>
+          <span class="time">time </span>
+        </li>
       </ul>
     </div>
   );
