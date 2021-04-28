@@ -5,10 +5,7 @@ import ReactNipple from "react-nipple";
 import DebugView from "react-nipple/lib/DebugView";
 
 const mqtt = require("mqtt");
-const client = mqtt.connect("ws://localhost:8888");
-const topic = "test";
-const message = "helo";
-client.subscribe(topic);
+const client = mqtt.connect("mqtt://localhost:1883");
 
 export default class JoyStick extends Component {
   static propTypes = {
