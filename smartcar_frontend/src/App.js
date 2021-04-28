@@ -1,10 +1,10 @@
 import React from "react";
-import { Route, BrowserRouter as Router } from "react-router-dom";
-import "./App.css";
-import { Race } from "./Components/Racing/Race";
-import LeaderBoard from "./Components/LeaderBoard";
-import Home from "./Components/Home/Home";
-import Times from "./Components/Times";
+import { Route, BrowserRouter as Router, NavLink } from "react-router-dom";
+import "./style/App.css";
+import { Race } from "./components/race/Race";
+import LeaderBoard from "./components/leaderboard/LeaderBoard";
+import Home from "./pages/home/Home";
+import Times from "./components/Times";
 
 function App() {
   return (

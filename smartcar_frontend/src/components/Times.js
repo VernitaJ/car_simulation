@@ -1,5 +1,5 @@
-import React from "react";
-import "./Home/Home.css";
+import React, { useState, useEffect } from "react";
+import "../pages/home/Home.css";
 
 //const TimeList = "";
 

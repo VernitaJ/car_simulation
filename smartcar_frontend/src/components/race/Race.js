@@ -1,6 +1,8 @@
 import { React, Component } from "react";
 import Joystick from "./Joystick";
 import "./Race.css";
+import Camera from "../camera/Camera";
+import Controller from "./Controller";
 
 class Race extends Component {
   render() {
