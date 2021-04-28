@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
-import "./LeaderBoard.css";
+
+import "../../pages/home/Home.css";
 
 //const LeaderBoardList = "";
 

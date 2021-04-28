@@ -1,6 +1,8 @@
 import { ReactComponent, Component } from "react";
 import React, { useState, useEffect } from "react";
 import "./Race.css";
+import Camera from "../camera/Camera"
+import Controller from "./Controller";
 
 class Race extends Component {
   connectHandler(gamepadIndex) {
@@ -30,7 +32,10 @@ class Race extends Component {
   render() {
     return (
       <div>
-        <div className="race-screen">Stream will go here</div>
+        <div className="race-screen">
+          <Camera/>
+        </div>
+        <Controller/>
       </div>
     );
   }

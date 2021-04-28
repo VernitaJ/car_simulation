@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "./Home/Home.css";
+import "../pages/home/Home.css";
 
 const TimeList = "";
 
