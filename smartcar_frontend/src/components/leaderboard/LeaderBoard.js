@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-import "../../pages/home/Home.css";
+import "./LeaderBoard.css";
 
 //const LeaderBoardList = "";
 
@@ -43,6 +43,7 @@ const LeaderBoard = () => {
         </li>
       </ul>
     </div>
+    
   );
 };
 

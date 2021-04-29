@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 import logo from "../../resources/logo.png";
 
 import "./Home.css";
-import Difficulty from "../../components/difficulty/Difficulty";
+import SpringDemo from "../../components/animatedCar/SpringDemo"
 
 class HomeComponent extends React.Component {
   state = { difficulty: false, difficultyLevel: "Easy" };
@@ -48,6 +48,7 @@ class HomeComponent extends React.Component {
                 <option className="difficult_options" value="Bossmode">Difficulty: Bossmode</option>
             </select>
       </div>
+      
     )
   }
 };
