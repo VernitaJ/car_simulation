@@ -11,8 +11,8 @@ class Race extends Component {
         <Joystick
           className="joystick"
           title="joystick"
-          width={250}
-          height={250}
+          width={300}
+          height={300}
           options={{
             mode: "static",
             color: "green",
