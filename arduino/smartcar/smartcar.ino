@@ -14,7 +14,6 @@ WiFiClient net;
 #endif
 MQTTClient mqtt;
 
-
 ArduinoRuntime arduinoRuntime;
 BrushedMotor leftMotor(arduinoRuntime, smartcarlib::pins::v2::leftMotorPins);
 BrushedMotor rightMotor(arduinoRuntime, smartcarlib::pins::v2::rightMotorPins);
@@ -35,8 +34,6 @@ DirectionlessOdometer rightOdometer{
     []() { rightOdometer.update(); },
     pulsesPerMeter};
 
-
-
 //SimpleCar car(control);
 SmartCar car(arduinoRuntime, control, gyroscope, leftOdometer, rightOdometer);
 
@@ -52,9 +49,8 @@ const auto redRearPin = 3;
 boolean allowForward = true;
 boolean allowBackward = true;
 boolean overrideAngle = false;
-boolean  overrideSpeed = false;
+boolean overrideSpeed = false;
 int safetySpeed = 0;
-
 
 //Sensor Setup
 SR04 front(arduinoRuntime, triggerPin, echoPin, maxDistance);
@@ -67,7 +63,7 @@ void setup()
 {
     Serial.begin(9600);
 #ifdef __SMCE__
-   // int OV767X::begin(int resolution, int format, int fps)
+    // int OV767X::begin(int resolution, int format, int fps)
     Camera.begin(QVGA, RGB888, 60);
     frameBuffer.resize(Camera.width() * Camera.height() * Camera.bytesPerPixel());
     mqtt.begin("127.0.0.1", 1883, WiFi);
@@ -92,14 +88,14 @@ void loop()
         const auto currentTime = millis();
 #ifdef __SMCE__
         static auto previousFrame = 0UL;
-        if (currentTime - previousFrame >= 65) {
-        previousFrame = currentTime;
-        Camera.readFrame(frameBuffer.data());
-        mqtt.publish("/smartcar/camera", frameBuffer.data(), frameBuffer.size(), false, 0);
-    }
+        if (currentTime - previousFrame >= 65)
+        {
+            previousFrame = currentTime;
+            Camera.readFrame(frameBuffer.data());
+            mqtt.publish("/smartcar/camera", frameBuffer.data(), frameBuffer.size(), false, 0);
+        }
 #endif
         obstacleDetection(currentTime);
-
     }
 #ifdef __SMCE__
     // Avoid over-using the CPU if we are running in the emulator
@@ -129,7 +125,7 @@ void handleInput(String topic, String message)
     else
     {
         autodriver(topic, message);
-        println("imput ignored: " + topic + " " + message);
+        println("input ignored: " + topic + " " + message);
     }
 }
 
@@ -143,9 +139,9 @@ void obstacleDetection(long currentTime)
         const auto sonicDistance = String(front.getDistance()).toInt();
         //const auto IRdistance = String(frontIR.getMedianDistance()).toInt();
         const auto IRdistance = String(rearIR.getMedianDistance()).toInt();
-        if(checkSensor(sonicDistance, 200))
+        if (checkSensor(sonicDistance, 200))
         {
-            if(allowForward)
+            if (allowForward)
             {
                 car.setSpeed(0);
             }
@@ -155,11 +151,11 @@ void obstacleDetection(long currentTime)
         {
             allowForward = true;
         }
-      
-        if(checkSensor(IRdistance, 15))
+
+        if (checkSensor(IRdistance, 15))
         {
             //println(String(IRdistance));
-            if(allowBackward)
+            if (allowBackward)
             {
                 car.setSpeed(0);
             }
@@ -169,7 +165,6 @@ void obstacleDetection(long currentTime)
         {
             allowBackward = true;
         }
-         
     }
 }
 
@@ -177,16 +172,17 @@ boolean checkSensor(int sensorData, int max)
 {
     return (0 < sensorData && sensorData < max);
 }
-boolean autodriver(String topic, String message){
-        if (topic == forward || topic == reverse)
-        {
-            car.setSpeed(-(message.toInt()));
-            println(String(-(message.toInt())));
-        }
-        if(topic == "/smartcar/control/steering/#")
-        {
-            car.setAngle((message.toInt()));
-        }
+boolean autodriver(String topic, String message)
+{
+    if (topic == forward || topic == reverse)
+    {
+        car.setSpeed(-(message.toInt()));
+        println(String(-(message.toInt())));
+    }
+    if (topic == "/smartcar/control/steering/#")
+    {
+        car.setAngle((message.toInt()));
+    }
     return false;
 }
 

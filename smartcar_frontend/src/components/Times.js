@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "../pages/home/Home.css";
 
-const TimeList = "";
+//const TimeList = "";
 
 const Times = (props) => {
   // useEffect(() => {
