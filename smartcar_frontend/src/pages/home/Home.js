@@ -29,31 +29,25 @@ class HomeComponent extends React.Component {
         </header>
         <NavLink className="active" to="/race">
           <div className="Home-link">
-          <li className="Home-linkItem">
-              Race
-          </li>
+            <li className="Home-linkItem">Race</li>
           </div>
         </NavLink>
         <NavLink className="active" to="/LeaderBoard">
           <div className="Home-link">
-          <li className="Home-linkItem">
-              Leaderboard
-          </li>
+            <li className="Home-linkItem">Leaderboard</li>
           </div>
         </NavLink>
         <NavLink className="active" to="/race_times">
           <div className="Home-link">
-          <li className="Home-linkItem">
-              Race times
-          </li>
+            <li className="Home-linkItem">Race times</li>
           </div>
         </NavLink>
-          <li className="Difficulty" onClick={this.onClick}>
-            Difficulty : {this.state.difficultyLevel}
-            {this.state.difficulty ? (
-              <Difficulty onSelectDiff={this.handleDifficulty} />
-            ) : null}
-          </li>
+        <li className="Difficulty" onClick={this.onClick}>
+          Difficulty : {this.state.difficultyLevel}
+          {this.state.difficulty ? (
+            <Difficulty onSelectDiff={this.handleDifficulty} />
+          ) : null}
+        </li>
       </div>
     );
   }

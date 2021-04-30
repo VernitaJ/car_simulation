@@ -1,41 +1,24 @@
-import { ReactComponent, Component } from "react";
-import React, { useState, useEffect } from "react";
+import { React, Component } from "react";
+import Joystick from "./Joystick";
 import "./Race.css";
-import Camera from "../camera/Camera"
-import Controller from "./Controller";
+import Camera from "../camera/Camera";
 
 class Race extends Component {
-  connectHandler(gamepadIndex) {
-    console.log(`Gamepad ${gamepadIndex} connected !`);
-  }
-
-  disconnectHandler(gamepadIndex) {
-    console.log(`Gamepad ${gamepadIndex} disconnected !`);
-  }
-
-  buttonChangeHandler(buttonName, down) {
-    console.log(buttonName, down);
-  }
-
-  axisChangeHandler(axisName, value, previousValue) {
-    console.log(axisName, value);
-  }
-
-  buttonDownHandler(buttonName) {
-    console.log(buttonName, "down");
-  }
-
-  buttonUpHandler(buttonName) {
-    console.log(buttonName, "up");
-  }
-
   render() {
     return (
       <div>
-        <div className="race-screen">
-          <Camera/>
-        </div>
-        <Controller/>
+        <div className="race-screen">Stream will go here</div>
+        <Joystick
+          className="joystick"
+          title="joystick"
+          width={300}
+          height={300}
+          options={{
+            mode: "static",
+            color: "green",
+            position: { top: "70%", left: "50%" },
+          }}
+        />
       </div>
     );
   }

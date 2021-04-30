@@ -7,7 +7,6 @@ export class Difficulty extends React.Component {
 
   handleSelectionChanged = (e) => {
     this.props.onSelectDiff(e.target.value);
-    console.log("d is now: " + this.state.dropDownSelection);
   };
 
   render() {
