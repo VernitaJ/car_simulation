@@ -1,11 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import "./LeaderBoard.css";
 import SpringDemo from "../../components/animatedCar/SpringDemo"
 
 //const LeaderBoardList = "";
 
 const LeaderBoard = () => {
-  const [user1, setuser1] = useState("user")
 
   return (
     <div>
@@ -13,7 +12,7 @@ const LeaderBoard = () => {
       <ul>
         <li>
           <span class="number">1 </span>
-          <span class="name" onClick={()=>setuser1("it changed")}>{user1} </span>
+          <span class="name">user </span>
           <span class="time">time </span>
         </li>
         <li>
