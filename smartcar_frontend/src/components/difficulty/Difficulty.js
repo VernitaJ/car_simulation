@@ -11,6 +11,7 @@ export class Difficulty extends React.Component {
 
   render() {
     return (
+      
       <div className="difficulty-button-container">
         <button
           className="difficulty-button"
