@@ -1,0 +1,77 @@
+.leaderboard-heading {
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(20px + 2vmin);
+    color: white;
+    display: flex;
+  flex-direction: column;
+  padding-bottom: 50px;
+}
+
+ul {
+    width: 800px;
+    margin: 100px auto 0;
+    padding: 10px;
+    box-sizing: border-box;
+    background: rgba(0,0,0,.2);
+    border-radius: 5px;
+}
+
+ul li {
+    display: flex;
+    background: rgba(3, 140, 140, 0.2);
+    padding: 30px 50px;
+    color: white;
+    margin: 5px 0;
+    transition: 0.5s;
+    font-size: 20px;
+}
+
+ul li:nth-child(1) {
+    background: rgb(3, 140, 140);
+}
+
+ul li:nth-child(2) {
+    background: rgba(3, 140, 140, 0.7);
+}
+ul li:nth-child(3) {
+    background: rgba(3, 140, 140, 0.4);
+}
+
+ul li span:nth-child(1) {
+    width: 60px;
+}
+
+ul li span:nth-child(2) {
+    width: 500px;
+}
+
+ul li span:nth-child(3) {
+    width: 100px;
+    text-align: right;
+}
+
+ul li span:nth-child(4) {
+    width: 70px;
+    text-align: right;
+} 
+
+ul li:hover {
+    transform: scale(1.06);
+}
+
+.course {
+    text-align: right;
+    margin-right: 400px;
+}
+.times-heading {
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(20px + 2vmin);
+    color: white;
+    display: flex;
+  flex-direction: column;
+  padding-bottom: 50px;
+}
