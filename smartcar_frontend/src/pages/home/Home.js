@@ -47,6 +47,8 @@ class HomeComponent extends React.Component {
                 <option className="difficult_options" value="Amateur">Difficulty: Amateur</option>
                 <option className="difficult_options" value="Bossmode">Difficulty: Bossmode</option>
             </select>
+            <SpringDemo />
+            
       </div>
       
     )

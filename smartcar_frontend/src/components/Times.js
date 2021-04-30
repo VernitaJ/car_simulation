@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "../pages/home/Home.css";
+import SpringDemo from "./animatedCar/SpringDemo"
 
 const TimeList = "";
 
@@ -15,8 +15,32 @@ const Times = (props) => {
     <div>
       <h2 className="times-heading">Times</h2>
       <ul>
-        <li></li>
+        <li>
+          <text className="course">Course </text>
+          <text className="times">00:00 </text>
+        </li>
+        <li>
+          <text className="course">Course </text>
+          <text className="times">00:00 </text>
+        </li>
+        <li>
+          <text className="course">Course </text>
+          <text className="times">00:00 </text>
+        </li>
+        <li>
+          <text className="course">Course </text>
+          <text className="times">00:00 </text>
+        </li>
+        <li>
+          <text className="course">Course </text>
+          <text className="times">00:00 </text>
+        </li>
+        <li>
+          <text className="course">Course </text>
+          <text className="times">00:00 </text>
+        </li>
       </ul>
+      <SpringDemo />
     </div>
   );
 };

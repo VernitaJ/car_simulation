@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-
 import "./LeaderBoard.css";
+import SpringDemo from "../../components/animatedCar/SpringDemo"
 
 //const LeaderBoardList = "";
 
@@ -42,6 +42,7 @@ const LeaderBoard = () => {
           <span class="time">time </span>
         </li>
       </ul>
+      <SpringDemo />
     </div>
     
   );

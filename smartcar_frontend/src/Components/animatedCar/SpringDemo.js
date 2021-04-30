@@ -1,7 +1,6 @@
 import { React, useRef, useState } from 'react'
 import { useSpring, animated } from 'react-spring'
 import Car from "../../resources/car.svg"
-import "./SpringDemo.css"
 import Cloud from "../../resources/cloud.svg"
 
 const SpringDemo = () => {
@@ -9,17 +8,21 @@ const SpringDemo = () => {
   const n = useRef(0)
   const styles = useSpring({
     from: {
-      marginLeft: "-15vw",
+      marginLeft: "-50vw",
       height: 100,
       width: 100,
+      rotate: 0,
+      marginTop: "3vw",
     },
     to: {
-      marginLeft: "110vw",
+      marginLeft: "90vw",
       height: 100,
       width: 100,
+      rotate: -20,
+      marginTop: "3vw",
     },
     config: {
-      duration: 9000,
+      duration: 9500,
     },
     loop: {
       reset: true,
@@ -32,20 +35,20 @@ const SpringDemo = () => {
   const stylesCloud = useSpring({
     from: {
       rotate: 0,
-      marginLeft: "-15vw",
+      marginLeft: "-50vw",
       height: 50,
       width: 50,
-      marginTop: "1.5vw",
+      marginTop: "3vw",
     },
     to: {
-      rotate: -500,
-      marginLeft: "110vw",
+      marginLeft: "90vw",
       height: 50,
       width: 50,
-      marginTop: "1.5vw",
+      marginTop: "3vw",
+      
     },
     config: {
-      duration: 9000,
+      duration: 9500,
     },
     loop: {
       reset: true,
@@ -54,9 +57,23 @@ const SpringDemo = () => {
       setFlip(180)
     }
   })
+  
 
   return (
     <div className="carWrapper">
+          <animated.img
+          src={Cloud}
+          width={20}
+          height={20}
+          style={{
+            height: "20px",
+            position: "fixed",
+            display: "flex",
+            paddingTop: "40px",
+            opacity: "0.5",
+            ...stylesCloud
+          }}
+      />
       <animated.img
         src={Car}
         height={50}
@@ -65,21 +82,11 @@ const SpringDemo = () => {
           rotate: 0,
           display: "flex",
           position: "fixed",
-          paddingLeft:"50px",
+          paddingLeft:"27px",
+          
           ...styles
         }}
         />
-        <animated.img
-          src={Cloud}
-          width={20}
-          height={20}
-          style={{
-            height: "20px",
-            position: "fixed",
-            display: "flex",
-            ...stylesCloud
-          }}
-      />
     </div>
   )
 }
