@@ -1,22 +1,20 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import "../../pages/home/Home.css";
 
-//const LeaderBoardList = "";
-
-const LeaderBoard = () => {
-  // useEffect(() => {
-  //   fetch(LeaderBoardList)
-  //     .then((response) => response.json())
-  //     .then((users) => setUsers(users))
-  //     .catch((err) => console.error(err));
-  // }, []);
-
+const LeaderBoard = (props) => {
+  let placement = 1;
   return (
     <div>
       <h2 className="leaderboard-heading">Leaderboard</h2>
-      <ul>
-        <li></li>
-      </ul>
+      <div className="leaderboard-grid">
+        {props.users.map((user) => (
+          <div className="leaderboard-row">
+            <h3 className="leaderboard-entry">{placement++}</h3>
+            <h4 className="leaderboard-entry">{user.username}</h4>
+            <h3 className="leaderboard-entry">{user.time}</h3>
+          </div>
+        ))}
+      </div>
     </div>
   );
 };
