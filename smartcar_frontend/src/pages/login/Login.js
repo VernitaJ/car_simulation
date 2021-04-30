@@ -28,7 +28,7 @@ class Login extends React.Component {
         <form>
           <label></label>
           <div>
-            <input id="inputfield" placeholder="username"></input>
+            <input id=""placeholder="username"></input>
           </div>
           <div>
             <button id="enter">Start</button>
