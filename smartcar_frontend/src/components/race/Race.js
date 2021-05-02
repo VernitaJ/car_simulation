@@ -7,12 +7,14 @@ class Race extends Component {
   render() {
     return (
       <div>
-        <div className="race-screen">Stream will go here</div>
+        <div className="race-screen">
+          <Camera />
+        </div>
         <Joystick
           className="joystick"
           title="joystick"
-          width={300}
-          height={300}
+          width={600}
+          height={600}
           options={{
             mode: "static",
             color: "green",
