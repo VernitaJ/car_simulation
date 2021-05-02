@@ -93,6 +93,7 @@
   letter-spacing: 0.1vh;
   text-align: center;
 }
+
 .DifficultyList {
   font-family: "Audiowide";
   font-variant: small-caps;
@@ -158,24 +159,6 @@
   cursor: pointer;
 }
 
-.leaderboard-grid {
-  display: grid;
-}
-
-.leaderboard-row {
-  display: flex;
-  background-color: darkblue;
-  border-radius: 15px;
-  padding: 3vh;
-  color: white;
-  margin: 3vh;
-  justify-content: space-between;
-}
-
-.leaderboard-entry {
-  margin: 2vh;
-  padding: 2vh;
-}
 .background {
   height: 100%;
 }
