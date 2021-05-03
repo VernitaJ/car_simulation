@@ -1,49 +1,21 @@
 import React from "react";
 import "./LeaderBoard.css";
-import SpringDemo from "../../components/animatedCar/SpringDemo"
 
-//const LeaderBoardList = "";
-
-const LeaderBoard = () => {
-
+const LeaderBoard = (props) => {
+  let placement = 1;
   return (
     <div>
       <h2 className="leaderboard-heading">Leaderboard</h2>
       <ul>
-        <li>
-          <span class="number">1 </span>
-          <span class="name">user </span>
-          <span class="time">time </span>
-        </li>
-        <li>
-          <span class="number">2 </span>
-          <span class="name">user </span>
-          <span class="time">time </span>
-        </li>
-        <li>
-          <span class="number">3 </span>
-          <span class="name">user </span>
-          <span class="time">time </span>
-        </li>
-        <li>
-          <span class="number">4 </span>
-          <span class="name">user </span>
-          <span class="time">time </span>
-        </li>
-        <li>
-          <span class="number">5 </span>
-          <span class="name">user </span>
-          <span class="time">time </span>
-        </li>
-        <li>
-          <span class="number">6 </span>
-          <span class="name">user </span>
-          <span class="time">time </span>
-        </li>
+        {props.users.map((user) => (
+          <li className="leaderboard-row">
+            <h3 className="leaderboard-entry">{placement++}</h3>
+            <h4 className="leaderboard-entry">{user.username}</h4>
+            <h3 className="leaderboard-entry">{user.time}</h3>
+          </li>
+        ))}
       </ul>
-      <SpringDemo />
     </div>
-    
   );
 };
 

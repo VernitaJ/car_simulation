@@ -1,10 +1,6 @@
 import React from "react";
 
 export class Difficulty extends React.Component {
-  state = {
-    dropDownSelection: "Easy",
-  };
-
   handleSelectionChanged = (e) => {
     this.props.onSelectDiff(e.target.value);
   };
