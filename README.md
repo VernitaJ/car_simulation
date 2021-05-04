@@ -1,6 +1,10 @@
 # group-02
 ## Contents
-[Description](#description)
+- [Description](#description)
+- [Justification](#justification)
+- [Resources](#resources-used)
+- [Development Team](#development-team)
+- [Special Thanks](#special-thanks)
 ## Description
 Smartbil by SaucyCorp is more than just a car. It's an experience. 
 
