@@ -14,6 +14,8 @@ WiFiClient net;
 #endif
 MQTTClient mqtt;
 
+// smartcarlib::constants::motor::kMaxMotorSpeed = 200;
+
 ArduinoRuntime arduinoRuntime;
 BrushedMotor leftMotor(arduinoRuntime, smartcarlib::pins::v2::leftMotorPins);
 BrushedMotor rightMotor(arduinoRuntime, smartcarlib::pins::v2::rightMotorPins);
