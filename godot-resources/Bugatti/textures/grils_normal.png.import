@@ -1,0 +1,36 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path.s3tc="res://.import/grils_normal.png-275329a60921fcfc6412fb5e9d5d1493.s3tc.stex"
+path.etc2="res://.import/grils_normal.png-275329a60921fcfc6412fb5e9d5d1493.etc2.stex"
+metadata={
+"imported_formats": [ "s3tc", "etc2" ],
+"vram_texture": true
+}
+
+[deps]
+
+source_file="res://src/Group2_Godot_resources/Bugatti/textures/grils_normal.png"
+dest_files=[ "res://.import/grils_normal.png-275329a60921fcfc6412fb5e9d5d1493.s3tc.stex", "res://.import/grils_normal.png-275329a60921fcfc6412fb5e9d5d1493.etc2.stex" ]
+
+[params]
+
+compress/mode=2
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/bptc_ldr=0
+compress/normal_map=1
+flags/repeat=true
+flags/filter=true
+flags/mipmaps=true
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+process/invert_color=false
+stream=false
+size_limit=0
+detect_3d=false
+svg/scale=1.0
