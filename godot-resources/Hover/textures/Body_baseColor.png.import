@@ -2,8 +2,8 @@
 
 importer="texture"
 type="StreamTexture"
-path.s3tc="res://.import/Body_baseColor.png-ff565046a08a710d8d7cc61249f76842.s3tc.stex"
-path.etc2="res://.import/Body_baseColor.png-ff565046a08a710d8d7cc61249f76842.etc2.stex"
+path.s3tc="res://.import/Body_baseColor.png-73aa13ce000fc9a7a2b0f9a02a108bbd.s3tc.stex"
+path.etc2="res://.import/Body_baseColor.png-73aa13ce000fc9a7a2b0f9a02a108bbd.etc2.stex"
 metadata={
 "imported_formats": [ "s3tc", "etc2" ],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://src/Group2_Godot_resources/Hover/textures/Body_baseColor.png"
-dest_files=[ "res://.import/Body_baseColor.png-ff565046a08a710d8d7cc61249f76842.s3tc.stex", "res://.import/Body_baseColor.png-ff565046a08a710d8d7cc61249f76842.etc2.stex" ]
+source_file="res://group-02/godot-resources/Hover/textures/Body_baseColor.png"
+dest_files=[ "res://.import/Body_baseColor.png-73aa13ce000fc9a7a2b0f9a02a108bbd.s3tc.stex", "res://.import/Body_baseColor.png-73aa13ce000fc9a7a2b0f9a02a108bbd.etc2.stex" ]
 
 [params]
 

@@ -2,8 +2,8 @@
 
 importer="texture"
 type="StreamTexture"
-path.s3tc="res://.import/Carbon_Fiber_baseColor.jpeg-287257b87668a0c8e8f3380ae366a05f.s3tc.stex"
-path.etc2="res://.import/Carbon_Fiber_baseColor.jpeg-287257b87668a0c8e8f3380ae366a05f.etc2.stex"
+path.s3tc="res://.import/Carbon_Fiber_baseColor.jpeg-6e20d89c44f281a4a59e5d21bc09bde6.s3tc.stex"
+path.etc2="res://.import/Carbon_Fiber_baseColor.jpeg-6e20d89c44f281a4a59e5d21bc09bde6.etc2.stex"
 metadata={
 "imported_formats": [ "s3tc", "etc2" ],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://src/Group2_Godot_resources/Bugatti/textures/Carbon_Fiber_baseColor.jpeg"
-dest_files=[ "res://.import/Carbon_Fiber_baseColor.jpeg-287257b87668a0c8e8f3380ae366a05f.s3tc.stex", "res://.import/Carbon_Fiber_baseColor.jpeg-287257b87668a0c8e8f3380ae366a05f.etc2.stex" ]
+source_file="res://group-02/godot-resources/Bugatti/textures/Carbon_Fiber_baseColor.jpeg"
+dest_files=[ "res://.import/Carbon_Fiber_baseColor.jpeg-6e20d89c44f281a4a59e5d21bc09bde6.s3tc.stex", "res://.import/Carbon_Fiber_baseColor.jpeg-6e20d89c44f281a4a59e5d21bc09bde6.etc2.stex" ]
 
 [params]
 
