@@ -5,7 +5,8 @@
   font-size: calc(30px + 2vmin);
   color: white;
   display: flex;
-flex-direction: column;
+  flex-direction: column;
+  margin-left: 20px;
 }
 
 ul {
@@ -122,4 +123,36 @@ ul li:hover {
     transform: scale(1.06);
   }
 
+  .times-heading {
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(40px + 2vmin);
+    color: white;
+    display: flex;
+  flex-direction: column;
+  }
+  .times {
+    margin-left: 50vh;
+  }
+  .course {
+    margin-left: 0vh;
+  }
+
+}
+.times-heading {
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(30px + 2vmin);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+}
+.times {
+  margin-left: 20vh;
+}
+.course {
+  margin-left: 0vh;
 }
