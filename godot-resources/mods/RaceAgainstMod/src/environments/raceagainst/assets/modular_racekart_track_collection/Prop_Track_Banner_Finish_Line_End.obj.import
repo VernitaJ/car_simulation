@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/Prop_Track_Banner_Finish_Line_End.obj-6e57aa9ba3a31e4affba45ac76f5832d.mesh"
+
+[deps]
+
+files=[ "res://.import/Prop_Track_Banner_Finish_Line_End.obj-6e57aa9ba3a31e4affba45ac76f5832d.mesh" ]
+
+source_file="res://src/environments/raceagainst/assets/modular_racekart_track_collection/Prop_Track_Banner_Finish_Line_End.obj"
+dest_files=[ "res://.import/Prop_Track_Banner_Finish_Line_End.obj-6e57aa9ba3a31e4affba45ac76f5832d.mesh", "res://.import/Prop_Track_Banner_Finish_Line_End.obj-6e57aa9ba3a31e4affba45ac76f5832d.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

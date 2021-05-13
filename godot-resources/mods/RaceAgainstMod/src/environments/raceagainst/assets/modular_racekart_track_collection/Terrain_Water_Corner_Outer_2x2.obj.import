@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/Terrain_Water_Corner_Outer_2x2.obj-293463a2c88dd762552b34b8d61918bf.mesh"
+
+[deps]
+
+files=[ "res://.import/Terrain_Water_Corner_Outer_2x2.obj-293463a2c88dd762552b34b8d61918bf.mesh" ]
+
+source_file="res://src/environments/raceagainst/assets/modular_racekart_track_collection/Terrain_Water_Corner_Outer_2x2.obj"
+dest_files=[ "res://.import/Terrain_Water_Corner_Outer_2x2.obj-293463a2c88dd762552b34b8d61918bf.mesh", "res://.import/Terrain_Water_Corner_Outer_2x2.obj-293463a2c88dd762552b34b8d61918bf.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

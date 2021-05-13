@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/Prop_Obstacle_Swinging_Hammer_Rod.obj-9ac3ab9693c0c12f03d65d1c3f4606f2.mesh"
+
+[deps]
+
+files=[ "res://.import/Prop_Obstacle_Swinging_Hammer_Rod.obj-9ac3ab9693c0c12f03d65d1c3f4606f2.mesh" ]
+
+source_file="res://src/environments/raceagainst/assets/modular_racekart_track_collection/Prop_Obstacle_Swinging_Hammer_Rod.obj"
+dest_files=[ "res://.import/Prop_Obstacle_Swinging_Hammer_Rod.obj-9ac3ab9693c0c12f03d65d1c3f4606f2.mesh", "res://.import/Prop_Obstacle_Swinging_Hammer_Rod.obj-9ac3ab9693c0c12f03d65d1c3f4606f2.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

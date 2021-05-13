@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/Ground_Boost_Speed_Curve_4x4.obj-387bc3297e995767510e991cc3dd836f.mesh"
+
+[deps]
+
+files=[ "res://.import/Ground_Boost_Speed_Curve_4x4.obj-387bc3297e995767510e991cc3dd836f.mesh" ]
+
+source_file="res://src/environments/raceagainst/assets/modular_racekart_track_collection/Ground_Boost_Speed_Curve_4x4.obj"
+dest_files=[ "res://.import/Ground_Boost_Speed_Curve_4x4.obj-387bc3297e995767510e991cc3dd836f.mesh", "res://.import/Ground_Boost_Speed_Curve_4x4.obj-387bc3297e995767510e991cc3dd836f.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

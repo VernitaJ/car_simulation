@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/Track_Normal_Curve_Inner_3x3.obj-b6134f814053bb19c7ef7017eddc7563.mesh"
+
+[deps]
+
+files=[ "res://.import/Track_Normal_Curve_Inner_3x3.obj-b6134f814053bb19c7ef7017eddc7563.mesh" ]
+
+source_file="res://src/environments/raceagainst/assets/modular_racekart_track_collection/Track_Normal_Curve_Inner_3x3.obj"
+dest_files=[ "res://.import/Track_Normal_Curve_Inner_3x3.obj-b6134f814053bb19c7ef7017eddc7563.mesh", "res://.import/Track_Normal_Curve_Inner_3x3.obj-b6134f814053bb19c7ef7017eddc7563.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

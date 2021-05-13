@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/Terrain_Cliff_Corner_Inner_2x2.obj-b019a4b3a8dd4d6d22db38c08764f8bf.mesh"
+
+[deps]
+
+files=[ "res://.import/Terrain_Cliff_Corner_Inner_2x2.obj-b019a4b3a8dd4d6d22db38c08764f8bf.mesh" ]
+
+source_file="res://src/environments/raceagainst/assets/modular_racekart_track_collection/Terrain_Cliff_Corner_Inner_2x2.obj"
+dest_files=[ "res://.import/Terrain_Cliff_Corner_Inner_2x2.obj-b019a4b3a8dd4d6d22db38c08764f8bf.mesh", "res://.import/Terrain_Cliff_Corner_Inner_2x2.obj-b019a4b3a8dd4d6d22db38c08764f8bf.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

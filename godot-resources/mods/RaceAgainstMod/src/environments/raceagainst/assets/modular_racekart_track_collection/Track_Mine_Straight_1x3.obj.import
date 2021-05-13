@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/Track_Mine_Straight_1x3.obj-2993de214a85fef1c174bf1ec372cfbb.mesh"
+
+[deps]
+
+files=[ "res://.import/Track_Mine_Straight_1x3.obj-2993de214a85fef1c174bf1ec372cfbb.mesh" ]
+
+source_file="res://src/environments/raceagainst/assets/modular_racekart_track_collection/Track_Mine_Straight_1x3.obj"
+dest_files=[ "res://.import/Track_Mine_Straight_1x3.obj-2993de214a85fef1c174bf1ec372cfbb.mesh", "res://.import/Track_Mine_Straight_1x3.obj-2993de214a85fef1c174bf1ec372cfbb.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

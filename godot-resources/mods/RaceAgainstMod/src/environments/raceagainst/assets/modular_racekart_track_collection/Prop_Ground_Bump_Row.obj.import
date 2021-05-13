@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/Prop_Ground_Bump_Row.obj-21edf7b1182a00ce7167b23a846af574.mesh"
+
+[deps]
+
+files=[ "res://.import/Prop_Ground_Bump_Row.obj-21edf7b1182a00ce7167b23a846af574.mesh" ]
+
+source_file="res://src/environments/raceagainst/assets/modular_racekart_track_collection/Prop_Ground_Bump_Row.obj"
+dest_files=[ "res://.import/Prop_Ground_Bump_Row.obj-21edf7b1182a00ce7167b23a846af574.mesh", "res://.import/Prop_Ground_Bump_Row.obj-21edf7b1182a00ce7167b23a846af574.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

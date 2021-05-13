@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/Prop_Track_Ramp_Support.obj-31164ae7b623a31710cb9c7e0bc12a3d.mesh"
+
+[deps]
+
+files=[ "res://.import/Prop_Track_Ramp_Support.obj-31164ae7b623a31710cb9c7e0bc12a3d.mesh" ]
+
+source_file="res://src/environments/raceagainst/assets/modular_racekart_track_collection/Prop_Track_Ramp_Support.obj"
+dest_files=[ "res://.import/Prop_Track_Ramp_Support.obj-31164ae7b623a31710cb9c7e0bc12a3d.mesh", "res://.import/Prop_Track_Ramp_Support.obj-31164ae7b623a31710cb9c7e0bc12a3d.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

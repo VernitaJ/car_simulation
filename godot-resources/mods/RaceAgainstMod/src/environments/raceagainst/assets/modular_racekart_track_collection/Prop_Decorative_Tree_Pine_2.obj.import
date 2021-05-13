@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/Prop_Decorative_Tree_Pine_2.obj-c1dddd199001fdb187753148d7641b1e.mesh"
+
+[deps]
+
+files=[ "res://.import/Prop_Decorative_Tree_Pine_2.obj-c1dddd199001fdb187753148d7641b1e.mesh" ]
+
+source_file="res://src/environments/raceagainst/assets/modular_racekart_track_collection/Prop_Decorative_Tree_Pine_2.obj"
+dest_files=[ "res://.import/Prop_Decorative_Tree_Pine_2.obj-c1dddd199001fdb187753148d7641b1e.mesh", "res://.import/Prop_Decorative_Tree_Pine_2.obj-c1dddd199001fdb187753148d7641b1e.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

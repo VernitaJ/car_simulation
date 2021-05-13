@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/Track_Normal_Esse_2x3.obj-26e1d3f35fe32e1ee464adada709806e.mesh"
+
+[deps]
+
+files=[ "res://.import/Track_Normal_Esse_2x3.obj-26e1d3f35fe32e1ee464adada709806e.mesh" ]
+
+source_file="res://src/environments/raceagainst/assets/modular_racekart_track_collection/Track_Normal_Esse_2x3.obj"
+dest_files=[ "res://.import/Track_Normal_Esse_2x3.obj-26e1d3f35fe32e1ee464adada709806e.mesh", "res://.import/Track_Normal_Esse_2x3.obj-26e1d3f35fe32e1ee464adada709806e.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

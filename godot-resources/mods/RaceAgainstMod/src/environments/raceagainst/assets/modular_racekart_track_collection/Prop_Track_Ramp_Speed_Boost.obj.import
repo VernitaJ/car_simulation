@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/Prop_Track_Ramp_Speed_Boost.obj-624f2e2c8492342dfbe9789767eb6ad6.mesh"
+
+[deps]
+
+files=[ "res://.import/Prop_Track_Ramp_Speed_Boost.obj-624f2e2c8492342dfbe9789767eb6ad6.mesh" ]
+
+source_file="res://src/environments/raceagainst/assets/modular_racekart_track_collection/Prop_Track_Ramp_Speed_Boost.obj"
+dest_files=[ "res://.import/Prop_Track_Ramp_Speed_Boost.obj-624f2e2c8492342dfbe9789767eb6ad6.mesh", "res://.import/Prop_Track_Ramp_Speed_Boost.obj-624f2e2c8492342dfbe9789767eb6ad6.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

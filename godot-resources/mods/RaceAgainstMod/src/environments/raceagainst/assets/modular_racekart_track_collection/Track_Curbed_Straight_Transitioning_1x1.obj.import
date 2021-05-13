@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/Track_Curbed_Straight_Transitioning_1x1.obj-54966b1559979b470aa2b296d2fcb76b.mesh"
+
+[deps]
+
+files=[ "res://.import/Track_Curbed_Straight_Transitioning_1x1.obj-54966b1559979b470aa2b296d2fcb76b.mesh" ]
+
+source_file="res://src/environments/raceagainst/assets/modular_racekart_track_collection/Track_Curbed_Straight_Transitioning_1x1.obj"
+dest_files=[ "res://.import/Track_Curbed_Straight_Transitioning_1x1.obj-54966b1559979b470aa2b296d2fcb76b.mesh", "res://.import/Track_Curbed_Straight_Transitioning_1x1.obj-54966b1559979b470aa2b296d2fcb76b.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true
