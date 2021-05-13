@@ -30,7 +30,7 @@ const Camera = () => {
     ctx.globalCompositeOperation = 'copy';
     ctx.drawImage(canvas, 0,0, imageData.width, imageData.height, 0,0, WIDTH*6, HEIGHT*6);
   });
-  return <canvas id="canvas" height={HEIGHT * 6} width={WIDTH*6 }/>;
+  return <canvas id="canvas" height={HEIGHT * 2} width={WIDTH*3 }/>;
 };
 
 export default Camera;
