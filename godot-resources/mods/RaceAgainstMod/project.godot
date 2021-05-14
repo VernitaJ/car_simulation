@@ -15,7 +15,7 @@ _global_script_class_icons={
 [application]
 
 config/name="RaceAgainstMod"
-run/main_scene="res://src/environments/raceagainst/RaceAgainst.tscn"
+run/main_scene="res://src/environments/raceagainst.old/RaceAgainst.tscn"
 
 [physics]
 

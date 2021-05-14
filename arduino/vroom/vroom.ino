@@ -76,7 +76,7 @@ void setup()
     if (mqtt.connect("arduino", "public", "public"))
     {
         mqtt.subscribe("/smartcar/control/#", 1);
-        mqtt.onMessage([](String topic, String message) {
+        mqtt.onMessage(+[](String& topic, String& message) {
             handleInput(topic, message);
         });
     }
