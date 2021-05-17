@@ -11,7 +11,9 @@ const BACKEND_ROOT = "http://localhost:3002/";
 
 function App() {
   const [users, setUsers] = useState([]);
-  const [username, setUsername] = useState("");
+  const [username, setUsername] = React.useState(
+    JSON.parse(localStorage.getItem("user"))
+  );
   const [login, setLogin] = useState(false);
 
   useEffect(() => {
@@ -23,8 +25,13 @@ function App() {
     console.log("backend fetch complete");
   }, []);
 
+  useEffect(() => {
+    localStorage.setItem("username", username);
+  }, [username]);
+
   const handleUser = (userInput) => {
     setUsername(userInput);
+    localStorage.setItem("username", JSON.stringify({ username: userInput }));
   };
 
   console.log("username is now: " + username);

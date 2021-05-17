@@ -26,7 +26,13 @@ class HomeComponent extends React.Component {
           <h1 className="Home-logo-text">SmartCar Shield</h1>
         </header>
         <h4 className="home-name-text">Welcome, {this.props.username}</h4>
-        <NavLink className="active" to="/race">
+        <NavLink
+          className="active"
+          to={{
+            pathname: "/race",
+            userProps: { username: this.props.username },
+          }}
+        >
           <div className="Home-link">
             <li className="Home-linkItem">Race</li>
           </div>

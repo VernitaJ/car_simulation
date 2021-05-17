@@ -28,17 +28,12 @@ class Login extends React.Component {
           <h1 className="Home-logo-text">SmartCar Shield</h1>
         </header>
         <form onSubmit={this.onSubmit}>
-          <label></label>
-          <div>
-            <input
-              id=""
-              placeholder="username"
-              onChange={this.myChangeHandler}
-            ></input>
-          </div>
-          <div>
-            <button id="submit">Start</button>
-          </div>
+          <input
+            id=""
+            placeholder="username"
+            onChange={this.myChangeHandler}
+          ></input>
+          <button type="submit">Start</button>
         </form>
         <SpringDemo />
       </div>
