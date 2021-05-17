@@ -145,15 +145,6 @@
   text-decoration: none;
   border-radius: 50%;
 }
-.difficulty-button[value="Easy"] {
-  background-color: #0bbe32;
-}
-.difficulty-button[value="Amateur"] {
-  background-color: #e0dd00;
-}
-.difficulty-button[value="BossMode"] {
-  background-color: #d60f0f;
-}
 
 .difficulty-button:hover {
   cursor: pointer;
@@ -161,4 +152,9 @@
 
 .background {
   height: 100%;
+}
+
+.home-name-text {
+  margin-left: 4vh;
+  color: white;
 }
