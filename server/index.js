@@ -24,31 +24,9 @@ server.post("/", async (request, reply) => {
   reply.send(result);
 });
 
-// server.delete("/:id", async (request, reply) => {
-//   const sql = "DELETE FROM users WHERE id = $1";
-//   const values = [request.params.id];
-//   const result = await client.query(sql, values);
-//   reply.send(result);
-// });
-
-// server.put("/:id", async (request, reply) => {
-//   const sql = "UPDATE users SET name = $1, username = $2 WHERE id=$3;";
-//   const values = [request.body.name, request.body.username, request.params.id];
-//   const result = await client.query(sql, values);
-//   reply.send(result);
-// });
-
 (async () => {
   try {
     await client.connect();
-
-    await client.query(`
-    CREATE TABLE IF NOT EXISTS users (
-      id serial PRIMARY KEY,
-      name TEXT NOT NULL,
-      username TEXT NOT NULL
-    );
-    `);
 
     await server.listen(3002);
 
