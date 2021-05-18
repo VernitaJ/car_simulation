@@ -155,7 +155,7 @@ script = ExtResource( 13 )
 [node name="smoke" type="Spatial" parent="."]
 
 [node name="Smoke" type="Particles" parent="smoke"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.520535, -0.71208, 0.861016 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.823263, -0.71208, 1.63889 )
 emitting = false
 amount = 10
 lifetime = 0.4
@@ -165,7 +165,7 @@ process_material = SubResource( 5 )
 draw_pass_1 = SubResource( 7 )
 
 [node name="Smoke2" type="Particles" parent="smoke"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.474042, -0.71208, 0.861016 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.795751, -0.71208, 1.63889 )
 emitting = false
 amount = 10
 lifetime = 0.4
@@ -173,21 +173,6 @@ speed_scale = 1.6
 local_coords = false
 process_material = SubResource( 5 )
 draw_pass_1 = SubResource( 7 )
-
-[node name="RayCast" type="RayCast" parent="smoke"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.973, -0.664577, 1.972 )
-enabled = true
-cast_to = Vector3( 0, -0.1, 0 )
-
-[node name="RayCast2" type="RayCast" parent="smoke"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.990238, -0.664577, 1.972 )
-enabled = true
-cast_to = Vector3( 0, -0.1, 0 )
-
-[node name="RayCast3" type="RayCast" parent="smoke"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0365658, -0.664439, -1.90633 )
-enabled = true
-cast_to = Vector3( 0, -0.1, 0 )
 
 [node name="body" type="MeshInstance" parent="."]
 transform = Transform( 1.6, 0, 0, 0, 1.6, 0, 0, 0, 1.6, -3.9272e-14, -0.461785, 0 )

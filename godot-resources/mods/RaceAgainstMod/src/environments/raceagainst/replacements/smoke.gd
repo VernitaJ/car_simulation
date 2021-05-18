@@ -1,10 +1,7 @@
 extends Spatial
 
 
-onready var ray = $smoke/RayCast
-onready var ray2 = $smoke/RayCast2
-onready var ray3 = $smoke/RayCast3
-
+onready var smce = get_parent().get_parent().get_parent()
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -13,10 +10,10 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-
-	if ray.is_colliding() or ray2.is_colliding() or ray3.is_colliding() :
+	if Input.is_action_pressed("ui_right") || Input.is_action_pressed("ui_left"):
 		$smoke/Smoke.emitting = true
 		$smoke/Smoke2.emitting = true
 	else:
 		$smoke/Smoke.emitting = false
 		$smoke/Smoke2.emitting = false
+

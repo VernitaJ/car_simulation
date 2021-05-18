@@ -97,7 +97,7 @@ void loop()
             mqtt.publish("/smartcar/camera", frameBuffer.data(), frameBuffer.size(), false, 0);
         }
 #endif
-        obstacleDetection(currentTime);
+        //obstacleDetection(currentTime);
     }
 #ifdef __SMCE__
     // Avoid over-using the CPU if we are running in the emulator

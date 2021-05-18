@@ -8,6 +8,7 @@ import Times from "./components/Times";
 import Login from "./pages/login/Login";
 
 const BACKEND_ROOT = "http://localhost:3002/";
+const GODOT_ROOT = "http://localhost:3003/";
 
 function App() {
   const [users, setUsers] = useState([]);
@@ -20,6 +21,12 @@ function App() {
       .then((users) => setUsers(users))
       .catch((err) => console.error(err));
     console.log(users);
+  }, []);
+
+  useEffect(() => {
+      fetch(GODOT_ROOT)
+        .then((response) => console.log(response.json()))
+        .catch((err) => console.error(err));
   }, []);
 
   return (
