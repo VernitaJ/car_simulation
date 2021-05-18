@@ -33,7 +33,11 @@ function App() {
             path="/leaderboard"
             component={() => <LeaderBoard users={users} />}
           />
-          <Route exact path="/race_times" component={Times} />
+          <Route
+            exact
+            path="/race_times"
+            component={() => <Times users={users} />}
+          />
         </Router>
       </div>
     </>
