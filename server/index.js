@@ -18,7 +18,7 @@ server.get("/", async (request, reply) => {
 });
 
 server.post("/", async (request, reply) => {
-  const sql = "INSERT INTO users (name, username) VALUES ($1, $2);";
+  const sql = "INSERT INTO results (name, username) VALUES ($1, $2);";
   const values = [request.body.name, request.body.username];
   const result = await client.query(sql, values);
   reply.send(result);
