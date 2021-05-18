@@ -4,7 +4,7 @@ import "./style/App.css";
 import { Race } from "./components/race/Race";
 import LeaderBoard from "./components/leaderboard/LeaderBoard";
 import Home from "./pages/home/Home";
-import Times from "./components/Times";
+import Times from "./components/times/Times";
 import Login from "./pages/login/Login";
 
 const BACKEND_ROOT = "http://localhost:3002/";
@@ -14,6 +14,7 @@ function App() {
   const [username, setUsername] = React.useState(
     JSON.parse(localStorage.getItem("user"))
   );
+  const [user, setUser] = useState([]);
   const [login, setLogin] = useState(false);
 
   useEffect(() => {
@@ -27,6 +28,7 @@ function App() {
 
   useEffect(() => {
     localStorage.setItem("username", username);
+    setUser(users.filter((user) => user.username == username));
   }, [username]);
 
   const handleUser = (userInput) => {
@@ -34,7 +36,7 @@ function App() {
     localStorage.setItem("username", JSON.stringify({ username: userInput }));
   };
 
-  console.log("username is now: " + username);
+  console.log("username is now: " + username, "  user is : " + user.username);
   return (
     <div className="App">
       <Router>
@@ -58,11 +60,10 @@ function App() {
           path="/leaderboard"
           component={() => <LeaderBoard users={users} />}
         />
-        <Route exact path="/login" component={Login} />
         <Route
           exact
           path="/race_times"
-          component={() => <Times users={users} />}
+          component={() => <Times users={user} username={username} />}
         />
       </Router>
     </div>

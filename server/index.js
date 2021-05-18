@@ -37,7 +37,7 @@ server.post("/", async (request, reply) => {
     CREATE TABLE IF NOT EXISTS results (
       raceid serial PRIMARY KEY,
       username TEXT NOT NULL,
-      time TIME NOT NULL
+      time TIME NOT NULL,
       course VARCHAR(20) NOT NULL
     );
     `);
