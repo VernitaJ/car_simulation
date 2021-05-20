@@ -63,7 +63,7 @@ function App() {
         <Route
           exact
           path="/race_times"
-          component={() => <Times users={user} />}
+          component={() => <Times users={user} username={username} />}
         />
       </Router>
     </div>

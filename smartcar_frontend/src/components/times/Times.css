@@ -1,11 +1,9 @@
 .times-heading {
-  position: absolute;
   align-items: center;
   justify-content: center;
   font-size: calc(30px + 2vmin);
   color: white;
   display: flex;
-  flex-direction: column;
   margin-left: 20px;
 }
 
@@ -16,6 +14,15 @@
   color: white;
   margin: 5px 0;
   font-size: 20px;
+}
+
+.times-user {
+  font-size: large;
+  color: rgb(146, 241, 232);
+  margin-top: 150px;
+  margin-bottom: 0;
+  margin-left: 20px;
+  font-weight: 200;
 }
 
 .times-ul {
@@ -87,9 +94,16 @@
     flex-direction: column;
   }
 
+  .times-user {
+    font-size: large;
+    color: turquoise;
+    margin-top: 150px;
+    margin-bottom: 0;
+  }
+
   .times-ul {
     width: 800px;
-    margin: 150px auto 0;
+    margin-top: 0;
     padding: 10px;
     box-sizing: border-box;
     background: rgba(0, 0, 0, 0.2);
