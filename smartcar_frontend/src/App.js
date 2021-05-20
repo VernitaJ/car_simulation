@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Route, BrowserRouter as Router, Redirect } from "react-router-dom";
+import { Route, BrowserRouter as Router } from "react-router-dom";
 import "./style/App.css";
 import { Race } from "./components/race/Race";
 import LeaderBoard from "./components/leaderboard/LeaderBoard";
@@ -63,7 +63,7 @@ function App() {
         <Route
           exact
           path="/race_times"
-          component={() => <Times users={user} username={username} />}
+          component={() => <Times users={user} />}
         />
       </Router>
     </div>
