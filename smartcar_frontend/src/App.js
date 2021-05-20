@@ -4,7 +4,7 @@ import "./style/App.css";
 import { Race } from "./components/race/Race";
 import LeaderBoard from "./components/leaderboard/LeaderBoard";
 import Home from "./pages/home/Home";
-import Times from "./components/Times";
+import Times from "./components/times/Times";
 import Login from "./pages/login/Login";
 
 const BACKEND_ROOT = "http://localhost:3002/";
