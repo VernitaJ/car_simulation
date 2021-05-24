@@ -28,10 +28,6 @@ function App() {
   }, []);
 
   useEffect(() => {
-      fetch(GODOT_ROOT)
-        .then((response) => console.log(response.json()))
-        .catch((err) => console.error(err));
-  }, []);
     localStorage.setItem("username", username);
     setUser(users.filter((user) => user.username == username));
   }, [username]);
