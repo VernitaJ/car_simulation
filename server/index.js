@@ -18,8 +18,13 @@ server.get("/", async (request, reply) => {
 });
 
 server.post("/", async (request, reply) => {
-  const sql = "INSERT INTO users (name, username) VALUES ($1, $2);";
-  const values = [request.body.name, request.body.username];
+  const sql =
+    "INSERT INTO results (username, time, course) VALUES ($1, $2, $3);";
+  const values = [
+    request.body.username,
+    request.body.time,
+    request.body.course,
+  ];
   const result = await client.query(sql, values);
   reply.send(result);
 });
@@ -27,6 +32,15 @@ server.post("/", async (request, reply) => {
 (async () => {
   try {
     await client.connect();
+
+    await client.query(`
+    CREATE TABLE IF NOT EXISTS results (
+      raceid serial PRIMARY KEY,
+      username TEXT NOT NULL,
+      time TIME NOT NULL,
+      course VARCHAR(20) NOT NULL
+    );
+    `);
 
     await server.listen(3002);
 

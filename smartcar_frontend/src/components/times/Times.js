@@ -1,25 +1,28 @@
 import React from "react";
-import SpringDemo from "../animatedCar/SpringDemo"
+import SpringDemo from "../animatedCar/SpringDemo";
 import "./Times.css";
 
 //const TimeList = "";
 
 const Times = (props) => {
-  // useEffect(() => {
-  //   fetch(TimeList)
-  //     .then((response) => response.json())
-  //     .then((users) => setUsers(users))
-  //     .catch((err) => console.error(err));
-  // }, []);
-
+  console.log(props);
   return (
     <div>
-      <h2 className="times-heading">Leaderboard</h2>
+      <h2 className="times-heading">Times</h2>
+      <h4 className="times-user">Results for : {props.username}</h4>
       <ul className="times-ul">
+        <div className="times-columns">
+          <div className="times-column-text">Rank</div>
+          <div className="times-column-text">Course</div>
+          <div className="times-column-text">Time</div>
+        </div>
+        {props.users.map((user) => (
           <li className="times-li">
-            <span className="times-span">track</span>
-            <span className="times-span">time</span>
+            <div className="times-span">{user.placement}</div>
+            <div className="times-span">{user.course}</div>
+            <div className="times-span">{user.time}</div>
           </li>
+        ))}
       </ul>
       <SpringDemo />
     </div>
