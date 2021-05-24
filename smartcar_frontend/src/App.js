@@ -8,7 +8,6 @@ import Times from "./components/times/Times";
 import Login from "./pages/login/Login";
 
 const BACKEND_ROOT = "http://localhost:3002/";
-const GODOT_ROOT = "http://localhost:3003/";
 
 function App() {
   const [users, setUsers] = useState([]);
