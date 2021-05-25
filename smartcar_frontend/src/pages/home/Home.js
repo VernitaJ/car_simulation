@@ -2,7 +2,6 @@ import React, { useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import logo from "../../resources/logo.png";
 import "./Home.css";
-import Select from "react-select";
 import SpringDemo from "../../components/animatedCar/SpringDemo";
 import Difficulty from "../../components/difficulty/Difficulty";
 

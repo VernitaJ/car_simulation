@@ -28,7 +28,6 @@ function App() {
 
   useEffect(() => {
     localStorage.setItem("username", username);
-    list.filter((entry) => entry.username);
     setUser(users.filter((user) => user.username == username));
   }, [username]);
 
