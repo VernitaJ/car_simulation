@@ -11,11 +11,11 @@ onready var body_mesh = $CarMesh/tmpParent/Car/body
 
 export (bool) var show_debug = false
 var sphere_offset = Vector3(0, -1.5, .5)
-export var acceleration = 45
-export var steering = 40
-export var turn_speed = 4
+export var acceleration = 65
+export var steering = 60
+export var turn_speed = 6
 export var turn_stop_limit = 0.75
-export var body_tilt = 20
+export var body_tilt = 40
 var entered = 0
 var start = false
 var stop = false
@@ -26,10 +26,10 @@ var rotate_input = 0
 
 # ai
 export var num_rays = 32
-export var look_ahead = 12.0
+export var look_ahead = 16.0
 export var brake_distance = 5.0
-export var acceleration_bottom = 0.9
-export var acceleration_top = 1.1
+export var acceleration_bottom = 0.8
+export var acceleration_top = 1
 
 var interest = []
 var danger = []
@@ -99,8 +99,8 @@ func _process(delta):
 	#yield(get_tree().create_timer(start_delay), "timeout")
 	if start:
 	# Can't steer/accelerate when in the air
-		if not ground_ray.is_colliding():
-			return
+		#if not ground_ray.is_colliding():
+			#return
 		set_interest()
 		set_danger()
 		choose_direction()

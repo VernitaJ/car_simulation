@@ -18,7 +18,6 @@ function App() {
   const [login, setLogin] = useState(false);
 
   useEffect(() => {
-    console.log("fetching users");
     fetch(BACKEND_ROOT)
       .then((response) => response.json(users))
       .then((users) => setUsers(users))

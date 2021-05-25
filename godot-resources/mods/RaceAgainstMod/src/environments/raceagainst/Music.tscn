@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://src/environments/raceagainst/assets/Open_Road.mp3" type="AudioStream" id=1]
+[ext_resource path="res://src/environments/raceagainst/assets/Car_Driving_Sound_Effect.mp3" type="AudioStream" id=2]
+
+[node name="music" type="Spatial"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.49059 )
+
+[node name="Vroom" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource( 2 )
+autoplay = true
+max_distance = 1.0
+
+[node name="Music" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource( 1 )
+max_db = 2.0
+autoplay = true
+max_distance = 3.0
