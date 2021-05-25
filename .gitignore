@@ -53,6 +53,7 @@ local.py
 /build
 
 # godot stuff we dont need on github
+/assets
 godot-resources/mods/race_mod/src/environments/race/assets
 godot-resources/mods/RaceAgainstMod/src/environments/raceagainst/assets
 godot-resources/Bugatti/assets
