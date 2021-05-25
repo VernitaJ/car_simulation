@@ -17,14 +17,23 @@ server.get("/", async (request, reply) => {
   reply.send(result.rows);
 });
 
+server.get("/godot", async (request, reply) => {
+  const sql = "SELECT * FROM settings;";
+  const result = await client.query(sql);
+  reply.send(result.rows);
+});
+
+server.put("/godot", async (request, reply) => {
+  const sql = "UPDATE settings SET difficulty = $1, laps = $2, map = $3;";
+  const values = [ request.body.difficulty, request.body.laps, request.body.map ];
+  const result = await client.query(sql, values);
+  reply.send(result);
+});
+
 server.post("/", async (request, reply) => {
-  const sql =
-    "INSERT INTO results (username, time, course) VALUES ($1, $2, $3);";
-  const values = [
-    request.body.username,
-    request.body.time,
-    request.body.course,
-  ];
+  console.log(request.body.time);
+  const sql = "INSERT INTO racing (username, time, course, placement) VALUES ($1, $2, $3, $4);";
+  const values = [request.body.name, request.body.time, request.body.course, request.body.placement];
   const result = await client.query(sql, values);
   reply.send(result);
 });
@@ -43,6 +52,7 @@ server.post("/", async (request, reply) => {
     `);
 
     await server.listen(3002);
+
 
     console.info("App started correctly");
   } catch (err) {
