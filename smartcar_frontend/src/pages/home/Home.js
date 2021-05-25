@@ -26,49 +26,41 @@ class HomeComponent extends React.Component {
           <h1 className="Home-logo-text">SmartCar Shield</h1>
         </header>
         <h4 className="home-name-text">Welcome, {this.props.username}</h4>
-        <NavLink
-          className="active"
-          to={{
-            pathname: "/race",
-            userProps: { username: this.props.username },
-          }}
-        >
-          <div className="Home-link">
-            <li className="Home-linkItem">Race</li>
-          </div>
-        </NavLink>
-        <NavLink
-          className="active"
-          to={{
-            pathname: "/practice",
-            userProps: { username: this.props.username },
-          }}
-        >
-          <div className="Home-link">
-            <li className="Home-linkItem">Practice</li>
-          </div>
-        </NavLink>
-        <NavLink
-          className="active"
-          to={{
-            pathname: "/monster",
-            userProps: { username: this.props.username },
-          }}
-        >
-          <div className="Home-link">
-            <li className="Home-linkItem">Monster Run</li>
-          </div>
-        </NavLink>
-        <NavLink className="active" to="/LeaderBoard">
-          <div className="Home-link">
-            <li className="Home-linkItem">Leaderboard</li>
-          </div>
-        </NavLink>
-        <NavLink className="active" to="/race_times">
-          <div className="Home-link">
-            <li className="Home-linkItem">Race times</li>
-          </div>
-        </NavLink>
+        <div className="home-link">
+          <NavLink
+            className="active"
+            to={{
+              pathname: "/race",
+              userProps: { username: this.props.username },
+            }}
+          >
+            <div className="home-link-odd">Race</div>
+          </NavLink>
+          <NavLink
+            className="active"
+            to={{
+              pathname: "/practice",
+              userProps: { username: this.props.username },
+            }}
+          >
+            <div className="home-link-even">Practice</div>
+          </NavLink>
+          <NavLink
+            className="active"
+            to={{
+              pathname: "/monster",
+              userProps: { username: this.props.username },
+            }}
+          >
+            <div className="home-link-odd">Monster Run</div>
+          </NavLink>
+          <NavLink className="active" to="/LeaderBoard">
+            <div className="home-link-even">Leaderboard</div>
+          </NavLink>
+          <NavLink className="active" to="/race_times">
+            <div className="home-link-odd">Race times</div>
+          </NavLink>
+        </div>
         <select className="DifficultyList" name="Difficulty" id="difficulties">
           <option className="difficult_options" value="Easy">
             Difficulty: Easy

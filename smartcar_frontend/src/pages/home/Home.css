@@ -1,18 +1,18 @@
 .Home-logo {
-  width: 40vh;
+  width: 35vh;
   height: auto;
   pointer-events: none;
 }
 
 @media (prefers-reduced-motion: no-preference) {
   .Home-logo {
-    width: 200px;
+    width: 150px;
     height: auto;
   }
 }
 
 .Home-logo-text {
-  font-size: 4vh;
+  font-size: 3vh;
 }
 
 .Home-header {
@@ -27,8 +27,7 @@
   color: white;
 }
 
-.Home-link {
-  color: #ffffff;
+.home-link {
   list-style: none;
   font-size: x-large;
   text-decoration: none;
@@ -38,15 +37,15 @@
   text-decoration: none;
 }
 
-.Home-linkItem {
+.home-link-odd,
+.home-link-even {
   font-variant: small-caps;
   color: #ffffff;
   list-style-type: none;
-  background-color: #038c8c;
-  padding: 2vh;
+  padding: 1vh;
   border-radius: 15px;
   margin-bottom: 2vh;
-  width: 35vh;
+  width: 30vh;
   align-items: center;
   justify-content: center;
   font-size: 28px;
@@ -54,14 +53,19 @@
   text-align: center;
 }
 
-.Home-linkItem:hover {
-  cursor: pointer;
-  transition: all 0.5s ease;
-  color: #003436;
+.home-link-odd {
+  background-color: #3186a0;
 }
 
-.Home-linkItem:visited {
-  color: rgb(255, 255, 255);
+.home-link-even {
+  background-color: #065e1c;
+}
+
+.home-link-odd:hover,
+.home-link-even:hover {
+  cursor: pointer;
+  transition: all 0.2s ease;
+  color: #070c0c;
 }
 
 .active {
@@ -76,79 +80,6 @@
 .active:hover {
   transition: all 0.5s ease;
   color: #003436;
-}
-
-.Difficulty {
-  font-variant: small-caps;
-  color: #ffffff;
-  list-style-type: none;
-  background-color: #038c8c;
-  padding: 2vh;
-  border-radius: 15px;
-  margin-bottom: 4vh;
-  width: 35vh;
-  align-items: center;
-  justify-content: center;
-  font-size: 28px;
-  letter-spacing: 0.1vh;
-  text-align: center;
-}
-
-.DifficultyList {
-  font-family: "Audiowide";
-  font-variant: small-caps;
-  color: #ffffff;
-  list-style-type: none;
-  background-color: #038c8c;
-  padding: 2vh;
-  border-radius: 15px;
-  width: 39vh;
-  align-items: center;
-  justify-content: center;
-  font-size: 28px;
-  letter-spacing: 0.1vh;
-  text-align-last: center;
-  padding-right: 29px;
-  appearance: none;
-}
-
-.difficult_options {
-  font-size: 28px;
-  margin-bottom: 0;
-}
-
-.DifficultyList:hover {
-  transition: all 0.5s ease;
-  color: #003436;
-  cursor: pointer;
-}
-
-.Difficulty:hover {
-  transition: all 0.5s ease;
-  color: #003436;
-  cursor: pointer;
-}
-
-.difficulty-button-container {
-  display: flex;
-  width: 15vh;
-  margin-left: -8vh;
-}
-
-.difficulty-button {
-  border-style: none;
-  text-align: left;
-  margin: 1.5vh;
-  padding: 2vh;
-  color: #ffffff;
-  font-weight: 300;
-  font-size: large;
-  text-decoration: none;
-  border-radius: 50%;
-}
-
-.difficulty-button:hover {
-  cursor: pointer;
 }
 
 .background {
