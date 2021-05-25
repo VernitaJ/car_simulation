@@ -95,7 +95,7 @@ class HomeComponent extends React.Component {
             <div>Difficulty : {this.state.difficultyLevel}</div>
           )}
         </div>
-        <SpringDemo className="lilcar" />
+        <SpringDemo />
       </div>
     );
   }
