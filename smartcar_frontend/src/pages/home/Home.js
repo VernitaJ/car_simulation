@@ -11,6 +11,8 @@ const options = [
   { value: "Easy", label: "Easy" },
   { value: "Medium", label: "Medium" },
   { value: "Hard", label: "Hard" },
+  { value: "BossMode", label: "BossMode" },
+  { value: "Extreme", label: "Extreme" },
 ];
 
 class HomeComponent extends React.Component {
@@ -29,7 +31,6 @@ class HomeComponent extends React.Component {
   };
 
   handleDifficultyBackend = (diffValue) => {
-    console.log("this is here");
     fetch(BACKEND_ROOT, {
       method: "PUT",
       body: JSON.stringify({
@@ -72,27 +73,14 @@ class HomeComponent extends React.Component {
             <li className="Home-linkItem">Race times</li>
           </div>
         </NavLink>
-        <Select
-          placeholder="Difficulty"
-          options={options}
-          onChange={this.handleDifficulty}
-        />
-        <select
-          onClick={this.handleDifficulty}
-          className="DifficultyList"
-          name="Difficulty"
-          id="difficulties"
-        >
-          <option className="difficult_options" value="Easy">
-            Difficulty: Easy
-          </option>
-          <option className="difficult_options" value="Amateur">
-            Difficulty: Amateur
-          </option>
-          <option className="difficult_options" value="Bossmode">
-            Difficulty: Bossmode
-          </option>
-        </select>
+        <div className="DifficultyList">
+          <Select
+            placeholder="Difficulty"
+            options={options}
+            className="difficult_options"
+            onChange={this.handleDifficulty}
+          />
+        </div>
         <SpringDemo />
       </div>
     );
