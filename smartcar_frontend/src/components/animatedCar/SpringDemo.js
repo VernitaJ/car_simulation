@@ -63,6 +63,7 @@ const SpringDemo = () => {
         src={Cloud}
         width={20}
         height={20}
+        zIndex={100}
         style={{
           height: "20px",
           position: "fixed",
@@ -76,6 +77,7 @@ const SpringDemo = () => {
         src={Car}
         height={50}
         width={50}
+        zIndex={100}
         style={{
           rotate: 0,
           display: "flex",

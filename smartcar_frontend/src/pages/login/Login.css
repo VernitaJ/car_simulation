@@ -1,36 +1,36 @@
-label{
-    font-size: 28px;
-    color: white;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+label {
+  font-size: 28px;
+  color: white;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
 input {
-    width: 400px;
-    height: 70px;
-    padding: 12px 20px;
-    box-sizing: border-box;
-    border-radius: 15px;
-    font-size: 28px;
-    letter-spacing: 0.1vh;
-    font-family: audiowide;
-    text-align: center;
-    margin-top: 3vh;
+  width: 400px;
+  height: 70px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border-radius: 15px;
+  font-size: 28px;
+  letter-spacing: 0.1vh;
+  font-family: audiowide;
+  text-align: center;
+  margin-top: 3vh;
 }
 
-button{
-    width: 120px;
-    height: 60px;
-    align-items: center;
-    justify-content: center;
-    background-color: #038C8C;
-    color: white;
-    border-radius: 15px;
-    font-size: 20px;
-    letter-spacing: 0.1vh;
-    font-family: audiowide;
-    margin-top: 5vh;
-    margin-left: 37%;
-    margin-bottom: 15vh
+.login-button {
+  width: 120px;
+  height: 60px;
+  align-items: center;
+  justify-content: center;
+  background-color: #038c8c;
+  color: white;
+  border-radius: 15px;
+  font-size: 20px;
+  letter-spacing: 0.1vh;
+  font-family: audiowide;
+  margin-top: 5vh;
+  margin-left: 37%;
+  margin-bottom: 15vh;
 }

@@ -12,7 +12,7 @@ const server = fastify({ logger: true });
 server.register(fastifyCors, {});
 
 server.get("/", async (request, reply) => {
-  const sql = "SELECT * FROM racing ORDER BY time ASC;";
+  const sql = "SELECT * FROM results ORDER BY time ASC;";
   const result = await client.query(sql);
   reply.send(result.rows);
 });

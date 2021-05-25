@@ -18,7 +18,7 @@
 
 .times-user {
   font-size: large;
-  color: rgb(146, 241, 232);
+  color: rgb(73, 221, 67);
   margin-top: 150px;
   margin-bottom: 0;
   margin-left: 20px;
@@ -96,9 +96,9 @@
 
   .times-user {
     font-size: large;
-    color: turquoise;
+    color: rgb(73, 221, 67);
     margin-top: 150px;
-    margin-bottom: 0;
+    margin-bottom: 2vh;
   }
 
   .times-ul {

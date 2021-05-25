@@ -10,11 +10,12 @@ import Login from "./pages/login/Login";
 const BACKEND_ROOT = "http://localhost:3002/";
 
 function App() {
-  const [users, setUsers] = useState([]);
+  const [users, setUsers] = useState([]); //this is where all my database entries will be saved
   const [username, setUsername] = React.useState(
+    //this is where i save my username that is entered in login
     JSON.parse(localStorage.getItem("user"))
   );
-  const [user, setUser] = useState([]);
+  const [user, setUser] = useState([]); //this is where i will save my specific user from the full database
   const [login, setLogin] = useState(false);
 
   useEffect(() => {
@@ -54,6 +55,8 @@ function App() {
           }
         />
         <Route exact path="/race" component={Race} />
+        <Route exact path="/practice" component={Race} />
+        <Route exact path="/monster" component={Race} />
         <Route
           exact
           path="/leaderboard"
