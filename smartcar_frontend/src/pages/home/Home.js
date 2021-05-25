@@ -37,6 +37,28 @@ class HomeComponent extends React.Component {
             <li className="Home-linkItem">Race</li>
           </div>
         </NavLink>
+        <NavLink
+          className="active"
+          to={{
+            pathname: "/practice",
+            userProps: { username: this.props.username },
+          }}
+        >
+          <div className="Home-link">
+            <li className="Home-linkItem">Practice</li>
+          </div>
+        </NavLink>
+        <NavLink
+          className="active"
+          to={{
+            pathname: "/monster",
+            userProps: { username: this.props.username },
+          }}
+        >
+          <div className="Home-link">
+            <li className="Home-linkItem">Monster Run</li>
+          </div>
+        </NavLink>
         <NavLink className="active" to="/LeaderBoard">
           <div className="Home-link">
             <li className="Home-linkItem">Leaderboard</li>

@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import "./Race.css";
 import ReactNipple from "react-nipple";
-import DebugView from "react-nipple/lib/DebugView";
 
 const mqtt = require("mqtt");
 const client = mqtt.connect("ws://localhost:8888");

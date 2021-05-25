@@ -55,6 +55,8 @@ function App() {
           }
         />
         <Route exact path="/race" component={Race} />
+        <Route exact path="/practice" component={Race} />
+        <Route exact path="/monster" component={Race} />
         <Route
           exact
           path="/leaderboard"
