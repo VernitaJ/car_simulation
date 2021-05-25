@@ -40,7 +40,9 @@ func _process(delta):
 		if server.difficulty == "Extreme":
 			level = "Extreme"
 			motor_force = 1
-			boosters.enable_boost = false
+			boosters.enable_boost = true
+			boosters.power = 1000
+			boosters.boost_direction = Vector3(0, 0 , 5)
 			race_stats.race_laps = server.laps
 		elif server.difficulty == "BossMode":
 			level = "BossMode"

@@ -36,12 +36,13 @@ func recieve_data():
 # Called when the HTTP request is completed.
 func _on_request_completed(result, response_code, headers, body):
 	response = parse_json(body.get_string_from_utf8())
-	if !response.has("command"):
-		difficulty = response[0]["difficulty"]
-		laps = int(response[0]["laps"])
-		if laps < 2:
-			laps = 2
-		map = response[0]["map"]
+	if response != null:
+		if !response.has("command"):
+			difficulty = response[0]["difficulty"]
+			laps = int(response[0]["laps"])
+			if laps < 2:
+				laps = 2
+			map = response[0]["map"]
 
 func _ready():
 	connect("request_completed", self, "_on_request_completed")
