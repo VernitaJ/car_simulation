@@ -34,7 +34,9 @@ class Login extends React.Component {
             onChange={this.myChangeHandler}
           ></input>
           <div>
-          <button type="submit">Submit</button>
+            <button className="login-button" type="submit">
+              Submit
+            </button>
           </div>
         </form>
         <SpringDemo />

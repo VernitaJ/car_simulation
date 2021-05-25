@@ -7,8 +7,7 @@ export class Difficulty extends React.Component {
 
   render() {
     return (
-      
-      <div className="difficulty-button-container">
+      <div>
         <button
           className="difficulty-button"
           value="Easy"
@@ -18,10 +17,17 @@ export class Difficulty extends React.Component {
         </button>
         <button
           className="difficulty-button"
-          value="Amateur"
+          value="Medium"
           onClick={this.handleSelectionChanged}
         >
-          Amateur
+          Medium
+        </button>
+        <button
+          className="difficulty-button"
+          value="Hard"
+          onClick={this.handleSelectionChanged}
+        >
+          Hard
         </button>
         <button
           className="difficulty-button"
@@ -29,6 +35,13 @@ export class Difficulty extends React.Component {
           onClick={this.handleSelectionChanged}
         >
           BossMode
+        </button>
+        <button
+          className="difficulty-button"
+          value="Extreme"
+          onClick={this.handleSelectionChanged}
+        >
+          Extreme
         </button>
       </div>
     );

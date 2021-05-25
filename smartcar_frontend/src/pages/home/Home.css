@@ -95,3 +95,37 @@
 .difficult_options {
   color: green;
 }
+
+.difficulty {
+  display: flex;
+  max-height: fit-content;
+  border-radius: 5px 5px;
+  font-variant: small-caps;
+  color: #ffffff;
+  list-style-type: none;
+  padding: 1vh;
+  border-radius: 15px;
+  margin-bottom: 2vh;
+  width: 40vh;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  letter-spacing: 0.1vh;
+  text-align: center;
+}
+
+.difficulty-button {
+  font-size: large;
+  background-color: Transparent;
+  background-repeat: no-repeat;
+  border: none;
+  font-size: 24px;
+  width: 30vh;
+  color: #ffffff;
+  font-variant: small-caps;
+  border-style: none;
+  font-family: "Audiowide", cursive, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+    "Droid Sans", "Helvetica Neue", sans-serif;
+  margin: 1vh;
+}
