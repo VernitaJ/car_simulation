@@ -32,7 +32,6 @@ server.put("/godot", async (request, reply) => {
 });
 
 server.post("/", async (request, reply) => {
-  console.log(request.body.time);
   const sql =
     "INSERT INTO racing (username, time, course, placement) VALUES ($1, $2, $3, $4);";
   const values = [
