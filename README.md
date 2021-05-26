@@ -52,9 +52,66 @@ Finally if you are interested in working with the godot portions of the project 
 For information on how to create a mod please refer to : https://github.com/ItJustWorksTM/smce-gd/wiki/Modding
 The resources used for the maps and and some of the cars are not included in the [group-2](https://github.com/DIT112-V21/group-02) for space purposes but all of the logic and code is, therefore you will have to find and/or create your own models. 
 
+## Developers get started guide
+__Welcome to the SmartBil system!__
 
+Our goal is to bring you a fun and engaging racing experience, where you can compete with other people in a time where meeting in person is compromised. Along with this, why not put your own skill to the test and improve it? 
+Before all that fun though, here’s a guide on how to get started and how to get the most out of our app! 
+To start:
 
+1. Start smce and compile sketch 
+2. cd smartcar_frontend npm start
 
+After inputting your cool username and hitting the start button you’re greeted with this page.
+
+![Main Menu](/images/menu.PNG)
+
+As you can see in the menu, the smartbil features 3 different game modes. So let’s go over them briefly:
+ 
+Racing map - Bring out the competitive side of yourself! In a time-trial manner race against bot cars and get the best possible time!
+
+![Race Map](/images/racemap.PNG)
+
+Practice map - Perfect to get the hang of the controls in an environment that lets you roam freely. Enjoy the open city-scape and get good!
+
+![Practice Map](/images/citymap.PNG)
+
+Monster map - For all you horror game fans! We bring you a hair-raising adventure through a dark dungeon with a monster chasing you. Try to survive and drive away for as long as possible before your health has depleted and the monster wins!
+
+![Horror Map](/images/horrormap.PNG)
+
+Now let’s go over the controls for the car:
+Joystick - The app features a joystick for that authentic gaming feel, and this is featured both on mobile and desktop but will offer a better experience on mobile with a touch-screen. Just simply point the joystick in the direction you want to go and the car will follow.
+Keyboard - You can also choose to control the car with the arrow keys as well as WASD if you would like, this is recommended for desktop usage. 
+
+Discord - The app also features controlling of the car via a Discord bot! This does require some setting up though, here’s how:
+Create a developer discord account and generate a token (this token will allow interaction with Discord API which is needed to invite to discord)
+Add the token to the Discord python code as environment variable
+Run script for main Discord bot
+Invite the bot to a server (this is obtained from the aforementioned developer guide)
+Type .help to see the commands for running.
+
+Next up we have different difficulties to choose from, here’s what they all mean:
+
+Easy - Drive around with boosts on full power and on full speed
+Medium - Boosts have less power and is slightly slower than easy
+Hard - Boosts have been completely taken away and drive is slower
+BossMode - No boosts and slower
+Extreme - Once again, drive slower. Now boosts send you backwards, meaning it takes some skill to avoid them in order to get a good time.
+
+To change difficulty, go to the main menu and click the dropdown and simply choose the difficulty you want, then choose a map.
+
+Next up we have the leaderboard, this is where you can compare your times recorded in the different maps with your friends. Try to make it to the top with ! (and then gain bragging rights amongst your friends).
+
+![Leaderboard](/images/leaderboard.PNG)
+ 
+You can also view all your own recorded times in the separate Race Times page.
+
+![Times](/images/times.PNG)
+
+You can anytime just go backwards in your browser to go back to the home screen.
+
+Thank you for choosing our smartbil system!
 
 ## Development team
 Upon meeting any problems/bugs, kindly contact any one of us on these emails here.
