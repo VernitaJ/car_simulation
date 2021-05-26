@@ -5,6 +5,7 @@
 - [Resources](#resources-used)
 - [Development Team](#development-team)
 - [Special Thanks](#special-thanks)
+
 ## Description
 Smartbil by SaucyCorp is more than just a car. It's an experience. 
 
@@ -26,6 +27,12 @@ It also demonstrates the usage of the sensors, primary to the development of sma
 There is an element of fun and games within the (CAR NAME) program, however. Featuring two maps upon release, users have a choice of "free play" where they explore a medium sized city with all sorts of stunning scenery and a race map where the user races against the clock in a high intensity race with multiple choices to make that impact the time taken. These map choices tests the library in two contrasting scenarios, which will hopefully lead to the development of a more flexible, relaible library.
 
 This development process also explores how flexible and compatible the library really is, leading to a better development of the library itself by placing it in a realistic practical scenario instead of a vaccuum.
+
+## Getting started
+
+blah blah blah how to install
+
+For more detailed instructions, please visit the [wiki](https://github.com/DIT112-V21/group-02/wiki).
 
 ## Resources Used
 - [SMCE](https://github.com/ItJustWorksTM/smce-gd "SMCE github page")
