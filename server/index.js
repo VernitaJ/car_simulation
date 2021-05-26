@@ -21,7 +21,7 @@ server.post("/", async (request, reply) => {
   const sql =
     "INSERT INTO results (username, time, course, placement) VALUES ($1, $2, $3, $4);";
   const values = [
-    request.body.username,
+    request.body.name,
     request.body.time,
     request.body.course,
     request.body.placement,
