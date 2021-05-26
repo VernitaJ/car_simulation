@@ -58,6 +58,9 @@ func _ready():
 		}
 	}
 
+func update_player_name(new_name):
+	laps[player]["name"] = str(new_name)
+
 func set_player(smce):
 	laps.erase(player)
 	player = smce
@@ -133,12 +136,13 @@ func _process(delta):
 		time += delta
 	#_log_coordinates()
 	set_text(generate_text())
+	var http = get_tree().get_root().get_node("HTTP/HTTPRequest")
+	update_player_name(http.username)
 	if data_send:
 		if laps[player]["current"] == race_laps:
-			var http = get_tree().get_root().get_node("HTTP/HTTPRequest")
+			http = get_tree().get_root().get_node("HTTP/HTTPRequest")
 			http.send_data(laps[player], http.server)
 			data_send = false
-	
 
 func _log_laps(car):
 	laps[car]["current"] += 1

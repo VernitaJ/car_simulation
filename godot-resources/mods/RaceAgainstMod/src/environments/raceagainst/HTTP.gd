@@ -8,6 +8,7 @@ var response
 var difficulty = "Easy"
 var laps = 2
 var map = "Race Against The Machine"
+var username = "Player"
 var reload = false
 var change_map = false
 
@@ -43,6 +44,7 @@ func _on_request_completed(result, response_code, headers, body):
 			if laps < 2:
 				laps = 2
 			map = response[0]["map"]
+			username = response[0]["username"]
 
 func _ready():
 	connect("request_completed", self, "_on_request_completed")
