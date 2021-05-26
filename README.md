@@ -3,6 +3,7 @@
 - [Description](#description)
 - [Justification](#justification)
 - [Resources](#resources-used)
+- [Developers "get started" guide](#Developers-get-started-guide)
 - [Development Team](#development-team)
 - [Special Thanks](#special-thanks)
 ## Description
@@ -36,6 +37,24 @@ This development process also explores how flexible and compatible the library r
 - [Godot Engine](https://godotengine.org/ "Godot main page")
 - [Blender](https://www.blender.org/ "Blender")
 - [Road models: City map](https://sketchfab.com/3d-models/low-poly-modular-roads-free-asset-pack-d202f189bd5e46bb984eaa25398e200f)
+
+## Developers get started guide
+To start of with make sure you have the resources needed to work with this. For the resources used please refer to the "Resources used" section.
+Firstly make sure you go and install the latest version of SMCE at [smce_gd](https://github.com/ItJustWorksTM/smce-gd) and clone the repository [group-2](https://github.com/DIT112-V21/group-02) and open the project with an IDE of your choice. 
+For information on how to install the SMCE refer to: https://github.com/ItJustWorksTM/smce-gd/wiki#setup-with-prebuilts.
+
+
+In order to run the website you will need [Node.js](https://nodejs.org/en/). Once you have installed [Node.js](https://nodejs.org/en/) to get started you will need to run "npm install" from the smartcar-frontend dir, in addition to running npm install from the server dir. once you have installed the appropriate node packages in order to start the website, and the backend you will need to run "npm start" in both server, and smartcar_frontend. These two portions of the project are written in javascript via the react framework.
+
+If you want to tinker with the python code you will need to install python 3.7.7, and pipenv. You will then need to create a virutal environment for the python portion of the code. Once you have the necessary packages installed from the piplock file you can run main from the console by typing "python main.py" from the python directory. If you want to work on the discord bot specifically you will need to create a discord developer account and get a token so that you can interact with the discord API.
+
+Finally if you are interested in working with the godot portions of the project you will need to install [godot](https://godotengine.org/) and you will need to fork the [smce_gd](https://github.com/ItJustWorksTM/smce-gd) repository or download the zip file from the github repository page, in order to modify the mods that expect resources from [smce_gd](https://github.com/ItJustWorksTM/smce-gd) to be present. It is recommended that if you wish to do this, you create a new folder inside of the [smce_gd](https://github.com/ItJustWorksTM/smce-gd) project that you downloaded via the zip file or forked from the repository. This folder is where you can keep the [group-2](https://github.com/DIT112-V21/group-02) projects mods seperate from the rest of the [smce_gd](https://github.com/ItJustWorksTM/smce-gd) project. The reason that you need to put the mods inside of the [smce_gd](https://github.com/ItJustWorksTM/smce-gd) project, is because some of the code within the mods expects to modify or interact with code that is in [smce_gd](https://github.com/ItJustWorksTM/smce-gd) once you package the mod for use with smce_gd then it becomes self sustained within the parameters of the [smce_gd](https://github.com/ItJustWorksTM/smce-gd) mods capabilities.
+For information on how to create a mod please refer to : https://github.com/ItJustWorksTM/smce-gd/wiki/Modding
+The resources used for the maps and and some of the cars are not included in the [group-2](https://github.com/DIT112-V21/group-02) for space purposes but all of the logic and code is, therefore you will have to find and/or create your own models. 
+
+
+
+
 
 ## Development team
 Upon meeting any problems/bugs, kindly contact any one of us on these emails here.
