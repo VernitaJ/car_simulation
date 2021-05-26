@@ -13,6 +13,8 @@
 
 .Home-logo-text {
   font-size: 3vh;
+
+  font-weight: 100;
   margin-bottom: 5vh;
 }
 
@@ -66,7 +68,7 @@
 .home-link-even:hover {
   cursor: pointer;
   transition: all 0.2s ease;
-  color: #070c0c;
+  color: #9ca1a1;
 }
 
 .active {

@@ -5,7 +5,6 @@ import Camera from "../camera/Camera";
 
 class Race extends Component {
   render() {
-    console.log("welcome :" + this.props.location.userProps.username);
     return (
       <div>
         <div className="race-screen">

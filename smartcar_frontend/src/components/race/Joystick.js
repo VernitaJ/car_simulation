@@ -53,25 +53,28 @@ export default class JoyStick extends Component {
   };
 
   handleJoystickMove = (evt, data) => {
-    console.log("move");
+    console.log("move", data.positionY);
     this.setState({ data });
     let yChange = Math.abs(positionY - data.position.y);
     let xChange = Math.abs(positionX - data.position.x);
-    if (yChange > 8) {
+    if (yChange > 4) {
       positionY = data.position.y;
       let throttle = (yInitial - positionY) * 2;
-      if (throttle > 87) {
+      if (throttle > 45) {
         throttle = 100;
       }
       if (throttle > 0) {
+        console.log("forward", throttle);
         client.publish(forward, throttle.toString());
-      } else client.publish(reverse, throttle.toString());
+      } else {
+        console.log("forward", throttle);
+        client.publish(reverse, throttle.toString());
+      }
     }
-    if (xChange > 8) {
-      positionX = data.position.x;
-      let steering = (xInitial - positionX) * -1;
-      client.publish(right, steering.toString());
-    }
+    positionX = data.position.x;
+    let steering = (xInitial - positionX) * -1;
+    console.log("steering", steering);
+    client.publish(right, steering.toString());
   };
   handleJoystickDir = (evt, data) => {
     this.setState({ data });
