@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/logo.png-12aa0d1c71392a071908861570f05a7f.stex"
+path="res://.import/logo.png-cc3c19169bb8dff6a37b9b3a24b3b535.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://group-02/smartcar_frontend/src/resources/logo.png"
-dest_files=[ "res://.import/logo.png-12aa0d1c71392a071908861570f05a7f.stex" ]
+source_file="res://Documents/Code/School/group-02/smartcar_frontend/src/resources/logo.png"
+dest_files=[ "res://.import/logo.png-cc3c19169bb8dff6a37b9b3a24b3b535.stex" ]
 
 [params]
 
