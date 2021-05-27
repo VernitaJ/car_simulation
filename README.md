@@ -68,7 +68,7 @@ From the root folder go to group-02\godot-resources\mods in these folders you wi
 
 ## Using 
 First you have to go to the website type in your name and submit
-
+//insert picture of log in
 
 Then you are in the main menu:
 Here you have some options
@@ -79,6 +79,8 @@ Here you have some options
 - Leaderboard
 - Race Times
 
+//insert picture of main menu
+
 Lets go to race that's why we	are here right?
 So in the smce you choose the map you want to use in the world.  There will be the default playground, Race Against The Machines, MonsterMap and city map
 
@@ -86,6 +88,7 @@ Have you made your choice?
 
 Grate! 
 
+//picture of godot with changed world
 
 Now you can enjoy the race from the website. control the car with w, a, s, d or the arrow keys.
 Good luck!
