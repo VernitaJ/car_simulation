@@ -45,7 +45,7 @@ function App() {
           path="/"
           component={
             login
-              ? () => <Home username={username} />
+              ? () => <Home username={username} user={user} />
               : () => (
                   <Login
                     onUserInput={handleUser}

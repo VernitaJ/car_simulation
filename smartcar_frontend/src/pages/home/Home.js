@@ -57,7 +57,13 @@ const Home = (props) => {
           className="active"
           to={{
             pathname: "/race",
-            userProps: { username: props.username },
+            userProps: {
+              username: props.username,
+              user: props.user,
+              laps: "1",
+              difficulty: difficultyLevel,
+              map: "Race Against The Machine",
+            },
           }}
         >
           <div className="home-link-odd">Race</div>
