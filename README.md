@@ -53,3 +53,41 @@ Special thanks go to:
 - Github for streamlining project organization
 - Everyone on sketchfab for inspiration and actual models!
 - You!
+
+
+# User Guide
+Thank you for your interest in our project. To be able to try it out there are a few things you need to install and set up.
+
+First of all you need to install the SMCE from [SMCE](https://github.com/ItJustWorksTM/smce-gd) 
+Follow the instructions on the github page. 
+
+## Set up
+If you installed the SMCE correctly you will be within the godot folder. Godot\app_userdata\SMCE\mods here you will paste in the mods from the project.
+
+From the root folder go to group-02\godot-resources\mods in these folders you will find pck files. Copy them and paste them within the mods folder in SMCE 
+
+## Using 
+First you have to go to the website type in your name and submit
+
+
+Then you are in the main menu:
+Here you have some options
+- Race
+- Practice
+- Monster Run
+- Leaderboard
+- Leaderboard
+- Race Times
+
+Lets go to race that's why we	are here right?
+So in the smce you choose the map you want to use in the world.  There will be the default playground, Race Against The Machines, MonsterMap and city map
+
+Have you made your choice?
+
+Grate! 
+
+
+Now you can enjoy the race from the website. control the car with w, a, s, d or the arrow keys.
+Good luck!
+
+

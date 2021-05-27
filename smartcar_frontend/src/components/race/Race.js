@@ -12,7 +12,7 @@ const RIGHT = "/smartcar/control/steering/right";
 const IDLE = 0;
 const STRAIGHT = 0;
 const VELOCITY = 100;
-const DIRECTION = 35;
+const DIRECTION = 70;
 
 let up = false,
   right = false,
@@ -85,7 +85,7 @@ class Race extends Component {
         )
       );
     } else {
-      items = <h4 className="race-container">No races found}</h4>;
+      items = <h4 className="race-container">No races found</h4>;
     }
 
     console.log(this.props);
