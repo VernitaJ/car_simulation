@@ -3,3 +3,22 @@
   color: rgb(231, 227, 227);
   border: rgb(216, 228, 54);
 }
+.race-container {
+  display: flex;
+  justify-content: space-between;
+  color: white;
+  font-size: larger;
+  font-weight: 100;
+}
+
+.placement-heading {
+  color: white;
+  font-size: larger;
+  font-weight: 200;
+  display: flex;
+}
+
+.placement-name {
+  color: greenyellow;
+  margin-left: 1vh;
+}
