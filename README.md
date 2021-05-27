@@ -52,7 +52,7 @@ Finally if you are interested in working with the godot portions of the project 
 For information on how to create a mod please refer to : https://github.com/ItJustWorksTM/smce-gd/wiki/Modding
 The resources used for the maps and and some of the cars are not included in the [group-2](https://github.com/DIT112-V21/group-02) for space purposes but all of the logic and code is, therefore you will have to find and/or create your own models. 
 
-## Developers get started guide
+## User Manual
 __Welcome to the SmartBil system!__
 
 Our goal is to bring you a fun and engaging racing experience, where you can compete with other people in a time where meeting in person is compromised. Along with this, why not put your own skill to the test and improve it? 
