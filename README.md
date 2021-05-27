@@ -108,7 +108,7 @@ __Extreme__ - Once again, drive slower. Now boosts send you backwards, meaning i
 
 To change difficulty, go to the main menu and click the dropdown and simply choose the difficulty you want, then choose a map.
 
-Next up we have the _leaderboard_, this is where you can compare your times recorded in the different maps with your friends. Try to make it to the top with ! (and then gain bragging rights amongst your friends).
+Next up we have the _leaderboard_, this is where you can compare your times recorded in the different maps with your friends. Try to make it to the top! (and then gain bragging rights amongst your friends).
 
 ![Leaderboard](/images/leaderboard.PNG)
  
@@ -118,7 +118,7 @@ You can also view all your own recorded times in the separate _Race Times_ page.
 
 You can anytime just go backwards in your browser to go back to the home screen.
 
-Thank you for choosing our smartbil system!
+Thank you again for choosing our smartbil system!
 
 ## Development team
 Upon meeting any problems/bugs, kindly contact any one of us on these emails here.
