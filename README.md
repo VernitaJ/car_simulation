@@ -1,4 +1,7 @@
 # group-02
+
+This is an official labour of love! We, the development team, hope you get to enjoy just how flexible and compatible this library is! With the information provided in this file, you should be able to utilize the library and software to its full potential, or push it beyond! Good luck, and thanks for checking it out!
+
 ## Contents
 - [Description](#description)
 - [Justification](#justification)
@@ -9,36 +12,46 @@
 ## Description
 Smartbil by SaucyCorp is more than just a car. It's an experience. 
 
-Smartbil Can be conotrolled in multiple ways, which leads to a higher degree of accesibility. As of the latest release, the car can be controlled by: 
+Smartbil Can be conotrolled in multiple ways, which leads to a higher degree of accessibility. As of the latest release, the car can be controlled by: 
 - Keyboard
 - Website
 - Joystick
 - Discord bot
 
-Smartbil currently hosts two environments, a racing map where you can compete with your friends' times, and a city map where you can relax and drive the car.
-These maps were developed using pre-made and custom made models.
+Smartbil is extremely flexible, and currently hosts 4 stock maps. A small, low poly environment for testing purposes, a city map where the user can drive freely around the map and relax, a horror map where the user has to escape a scary monster and a map where the user races other computer controlled cars. To read how to create your own maps, or download pre-made maps created by other users, please refer to (INSERT LINK WHEN OTHER BRANCH IS LINKED).
 
-Smartbil is a multi tiered system with both an emulator and a website. The website recieves input through a listener and sends it to a central server based in Frankfurt, Germany. The central server then creates a new emulator instance and simulates these inputs. It then proceeds to return a camera feed of the changes happening.
+Smartbil is a multi tiered system with both an emulator and a website. The emulator is developed by students from the University of Gothenburg.
+The website works by launching a local server and a javascript/react page. It proceeds to wait for a connection from the emulator, and then proceeds to create a new camera within the emulator, in first person view, and proceeds to stream the new camera to the website.
+
+For documentation and further information, please refer to the [wiki](https://github.com/DIT112-V21/group-02/wiki).
 
 ## Justification
 Primarily used as a business tool to display the capabilities and limitations of the Smartcar library, this can also be used to showcase the capabilities of the emualtor and the software behind it. It also showcases how the software, library and emulator can be accessed and controlled using external environments.
 It also demonstrates the usage of the sensors, primary to the development of smarter cars and automatic driving services.
 
-There is an element of fun and games within the (CAR NAME) program, however. Featuring two maps upon release, users have a choice of "free play" where they explore a medium sized city with all sorts of stunning scenery and a race map where the user races against the clock in a high intensity race with multiple choices to make that impact the time taken. These map choices tests the library in two contrasting scenarios, which will hopefully lead to the development of a more flexible, relaible library.
+There is an element of fun and games within the Smartbil program, however. Featuring 3 maps upon release, users have a choice of "free play" where they explore a medium sized city with all sorts of stunning scenery, a race map where the user races against the clock in a high intensity race with multiple choices to make that impact the time taken and the monster map where users try to escape the deadly claws of a gigantic, fast monster.
 
-This development process also explores how flexible and compatible the library really is, leading to a better development of the library itself by placing it in a realistic practical scenario instead of a vaccuum.
+These map choices tests the library in three different and unique scenarios, which will hopefully lead to the development of a more flexible, reliable library. This development process also explores how flexible and compatible the library really is, leading to a better development of the library itself by placing it in a realistic practical scenarios instead of an isolated bubble.
 
-## Getting started
+## Development Process
 
-blah blah blah how to install
+This project was developed with an agile development pattern, as in the requirements and issues were reviewed periodically and edited continuesly, leading to more deveeloped and nuanced issues and functions.
 
-For more detailed instructions, please visit the [wiki](https://github.com/DIT112-V21/group-02/wiki).
+The SMCE Godot emulator is created by The University of Gothenburg using the C# programming language. For more information on the emulator, kindly refer to [the emulator' github repo](https://github.com/ItJustWorksTM/smce-gd "SMCE github page").
+
+The maps are created using models created by the development team and obtained from various websites. Kindly check the resources used page for liscensing and referrals to used models.
+
+The functionalities present within the software were programming using various programming languages, but primarily Gdscipt, C# and python. For further information, please check the [wiki](https://github.com/DIT112-V21/group-02/wiki) for additional documentation.
+
+The website is developed using both Javascript and react. For further information on the website's development, kindly refer to the wiki for additional documentation and information.
+
 
 ## Resources Used
 - [SMCE](https://github.com/ItJustWorksTM/smce-gd "SMCE github page")
 - [Arduino IDE](https://www.arduino.cc/en/software "Arduino")
 - [Android development platform](https://developer.android.com/studio "Android studio homepage")
 - [Python](https://www.python.org/ "Python home page")
+- [React]()
 - [Smartcar Library](https://www.arduinolibraries.info/libraries/smartcar-shield "Smartcar Library")
 - [Godot Engine](https://godotengine.org/ "Godot main page")
 - [Blender](https://www.blender.org/ "Blender")
