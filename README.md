@@ -145,6 +145,10 @@ You can anytime just go backwards in your browser to go back to the home screen.
 
 Thank you again for choosing our smartbil system!
 
+## Software Architecture
+
+![Software Architecture](https://github.com/DIT112-V21/group-02/blob/master/VroomArchitecture.png)
+
 ## Development team
 Upon meeting any problems/bugs, kindly contact any one of us on these emails here.
 
