@@ -23,7 +23,7 @@ Smartbil is extremely flexible, and currently hosts 4 stock maps. A small, low p
 Smartbil is a multi-tiered system with both an emulator and a website. The emulator is developed by students from the University of Gothenburg.
 The website works by launching a local server and a javascript/react page. It proceeds to wait for a connection from the emulator, and then proceeds to create a new camera within the emulator, in first person view, and proceeds to stream the new camera to the website.
 
-For documentation and further information, please refer to the [wiki](https://github.com/DIT112-V21/group-02/wiki).
+For further information, please refer to the [wiki](https://github.com/DIT112-V21/group-02/wiki).
 
 ## Justification
 Primarily used as a business tool to display the capabilities and limitations of the Smartcar library, this can also be used to showcase the capabilities of the emulator and the software behind it. It also showcases how the software, library and emulator can be accessed and controlled using external environments.
