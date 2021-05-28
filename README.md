@@ -12,7 +12,7 @@ This is an official labour of love! We, the development team, hope you get to en
 ## Description
 Smartbil by SaucyCorp is more than just a car. It's an experience. 
 
-Smartbil Can be conotrolled in multiple ways, which leads to a higher degree of accessibility. As of the latest release, the car can be controlled by: 
+Smartbil Can be controlled in multiple ways, which leads to a higher degree of accessibility. As of the latest release, the car can be controlled by: 
 - Keyboard
 - Website
 - Joystick
@@ -20,30 +20,34 @@ Smartbil Can be conotrolled in multiple ways, which leads to a higher degree of 
 
 Smartbil is extremely flexible, and currently hosts 4 stock maps. A small, low poly environment for testing purposes, a city map where the user can drive freely around the map and relax, a horror map where the user has to escape a scary monster and a map where the user races other computer controlled cars. To read how to create your own maps, or download pre-made maps created by other users, please refer to (INSERT LINK WHEN OTHER BRANCH IS LINKED).
 
-Smartbil is a multi tiered system with both an emulator and a website. The emulator is developed by students from the University of Gothenburg.
+Smartbil is a multi-tiered system with both an emulator and a website. The emulator is developed by students from the University of Gothenburg.
 The website works by launching a local server and a javascript/react page. It proceeds to wait for a connection from the emulator, and then proceeds to create a new camera within the emulator, in first person view, and proceeds to stream the new camera to the website.
 
 For documentation and further information, please refer to the [wiki](https://github.com/DIT112-V21/group-02/wiki).
 
 ## Justification
-Primarily used as a business tool to display the capabilities and limitations of the Smartcar library, this can also be used to showcase the capabilities of the emualtor and the software behind it. It also showcases how the software, library and emulator can be accessed and controlled using external environments.
+Primarily used as a business tool to display the capabilities and limitations of the Smartcar library, this can also be used to showcase the capabilities of the emulator and the software behind it. It also showcases how the software, library and emulator can be accessed and controlled using external environments.
 It also demonstrates the usage of the sensors, primary to the development of smarter cars and automatic driving services.
 
-There is an element of fun and games within the Smartbil program, however. Featuring 3 maps upon release, users have a choice of "free play" where they explore a medium sized city with all sorts of stunning scenery, a race map where the user races against the clock in a high intensity race with multiple choices to make that impact the time taken and the monster map where users try to escape the deadly claws of a gigantic, fast monster.
+There is an element of fun and games within the Smartbil program, however. Featuring 3 maps upon release, users have a choice of "free play" where they explore a beautiful city with all sorts of stunning scenery, a race map where the user races against the clock in a high intensity race with multiple choices to make that impact the time taken and the monster map where users try to escape the deadly claws of a gigantic, fast monster.
 
-These map choices tests the library in three different and unique scenarios, which will hopefully lead to the development of a more flexible, reliable library. This development process also explores how flexible and compatible the library really is, leading to a better development of the library itself by placing it in a realistic practical scenarios instead of an isolated bubble.
+These map choices tests the library in three different and unique scenarios, which will hopefully lead to the development of a more flexible, reliable library. This development process also explores how flexible and compatible the library really is, leading to a better development of the library itself by placing it in realistic practical scenarios instead of an isolated bubble.
 
 ## Development Process
 
-This project was developed with an agile development pattern, as in the requirements and issues were reviewed periodically and edited continuesly, leading to more deveeloped and nuanced issues and functions.
+This project was developed with an agile development process, which means that the team used multiple development techniques such as:
+- Team was dealt up into smaller, more cohesive teams with specific issues and areas.
+- Continually developing solutions to problems and improving upon solutions already developed beforehand.
+- Continually improving and creating new features.
+- Flexibility and adaptability within the development process.
 
-The SMCE Godot emulator is created by The University of Gothenburg using the C# programming language. For more information on the emulator, kindly refer to [the emulator' github repo](https://github.com/ItJustWorksTM/smce-gd "SMCE github page").
+The SMCE Godot emulator is created by The University of Gothenburg using the C# programming language. For more information on and documentation about the emulator, kindly refer to [the emulator's GitHub repo](https://github.com/ItJustWorksTM/smce-gd "SMCE GitHub page").
 
-The maps are created using models created by the development team and obtained from various websites. Kindly check the resources used page for liscensing and referrals to used models.
+The maps are created using models created by the development team and obtained from various websites. Kindly check the resources used page for licensing and referrals to used models.
 
-The functionalities present within the software were programming using various programming languages, but primarily Gdscipt, C# and python. For further information, please check the [wiki](https://github.com/DIT112-V21/group-02/wiki) for additional documentation.
+The functionalities and features present within the software were programming using various programming languages, but primarily Gdscipt, C# and python.
 
-The website is developed using both Javascript and react. For further information on the website's development, kindly refer to the wiki for additional documentation and information.
+The website is developed using both Javascript and react languages.
 
 
 ## Resources Used
@@ -69,7 +73,7 @@ Upon meeting any problems/bugs, kindly contact any one of us on these emails her
 
 ## Special thanks
 Special thanks go to:
-- All the hard working people at GU and Chalmers that make this whole programme possible!
-- Github for streamlining project organization
-- Everyone on sketchfab for inspiration and actual models!
+- All the hardworking people at GU and Chalmers that make this whole program possible!
+- GitHub for streamlining project organization
+- Everyone on Sketchfab for inspiration and actual models!
 - You!
