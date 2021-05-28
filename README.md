@@ -15,24 +15,21 @@ Smartbil by SaucyCorp is more than just a car. It's an experience.
 
 Smartbil Can be controlled in multiple ways, which leads to a higher degree of accessibility. As of the latest release, the car can be controlled by: 
 - Keyboard
-- Website
 - Joystick
 - Discord bot
-
-Smartbil is extremely flexible, and currently hosts 4 stock maps. A small, low poly environment for testing purposes, a city map where the user can drive freely around the map and relax, a horror map where the user has to escape a scary monster and a map where the user races other computer controlled cars. To read how to create your own maps, or download pre-made maps created by other users, please refer to (INSERT LINK WHEN OTHER BRANCH IS LINKED).
 
 Smartbil is a multi-tiered system with both an emulator and a website. The emulator is developed by students from the University of Gothenburg.
 The website works by launching a local server and a javascript/react page. It proceeds to wait for a connection from the emulator, and then proceeds to create a new camera within the emulator, in first person view, and proceeds to stream the new camera to the website.
 
+Smartbil is extremely flexible, and currently hosts 3 stock maps. To read how to create your own maps, or download pre-made maps created by other users, please refer to (INSERT LINK WHEN OTHER BRANCH IS LINKED).
+
 For further information, please refer to the [wiki](https://github.com/DIT112-V21/group-02/wiki).
 
 ## Justification
-Primarily used as a business tool to display the capabilities and limitations of the Smartcar library, this can also be used to showcase the capabilities of the emulator and the software behind it. It also showcases how the software, library and emulator can be accessed and controlled using external environments.
+This project is primarily used as a business tool to display the capabilities and limitations of the Smartcar library, this can also be used to showcase the capabilities of the emulator and the software behind it. It also showcases how the software, library and emulator can be accessed and controlled using external environments.
 It also demonstrates the usage of the sensors, primary to the development of smarter cars and automatic driving services.
 
-There is an element of fun and games within the Smartbil program, however. Featuring 3 maps upon release, users have a choice of "free play" where they explore a beautiful city with all sorts of stunning scenery, a race map where the user races against the clock in a high intensity race with multiple choices to make that impact the time taken and the monster map where users try to escape the deadly claws of a gigantic, fast monster.
-
-These map choices tests the library in three different and unique scenarios, which will hopefully lead to the development of a more flexible, reliable library. This development process also explores how flexible and compatible the library really is, leading to a better development of the library itself by placing it in realistic practical scenarios instead of an isolated bubble.
+There is an element of fun and games within the Smartbil program, however. Featuring 3 maps upon release. These map choices tests the library in three different and unique scenarios, which will hopefully lead to the development of a more flexible, reliable library. This development process also explores how flexible and compatible the library really is, leading to a better development of the library itself by placing it in realistic practical scenarios instead of an isolated bubble.
 
 ## Development Process
 
@@ -63,7 +60,8 @@ The website is developed using both Javascript and react languages.
 - [Road models: City map](https://sketchfab.com/3d-models/low-poly-modular-roads-free-asset-pack-d202f189bd5e46bb984eaa25398e200f)
 
 ## Developers get started guide
-To start of with make sure you have the resources needed to work with this. For the resources used please refer to the "Resources used" section.
+To start off with make sure you have the resources needed to work with this. For the resources used please refer to the "Resources used" section.
+
 Firstly make sure you go and install the latest version of SMCE at [smce_gd](https://github.com/ItJustWorksTM/smce-gd) and clone the repository [group-2](https://github.com/DIT112-V21/group-02) and open the project with an IDE of your choice. 
 For information on how to install the SMCE refer to: https://github.com/ItJustWorksTM/smce-gd/wiki#setup-with-prebuilts.
 
