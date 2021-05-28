@@ -55,7 +55,7 @@ Special thanks go to:
 - You!
 
 
-# User Guide
+## User Guide
 Thank you for your interest in our project. To be able to try it out there are a few things you need to install and set up.
 
 First of all you need to install the SMCE from [SMCE](https://github.com/ItJustWorksTM/smce-gd) 
@@ -79,8 +79,6 @@ Here you have some options
 - Leaderboard
 - Race Times
 
-//insert picture of main menu
-
 Lets go to race that's why we	are here right?
 So in the smce you choose the map you want to use in the world.  There will be the default playground, Race Against The Machines, MonsterMap and city map
 
@@ -88,9 +86,9 @@ Have you made your choice?
 
 Grate! 
 
-//picture of godot with changed world
-
 Now you can enjoy the race from the website. control the car with w, a, s, d or the arrow keys.
 Good luck!
+
+If there is any questions about how you use the system first read the user manual.
 
 
