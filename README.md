@@ -62,13 +62,14 @@ First of all you need to install the SMCE from [SMCE](https://github.com/ItJustW
 Follow the instructions on the github page. 
 
 ## Set up
+To clone the project use the guide in the following link [Cloning a repository](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository-from-github/cloning-a-repository)
 If you installed the SMCE correctly you will be within the godot folder. Godot\app_userdata\SMCE\mods here you will paste in the mods from the project.
 
 From the root folder go to group-02\godot-resources\mods in these folders you will find pck files. Copy them and paste them within the mods folder in SMCE 
 
 ## Using 
 First you have to go to the website type in your name and submit
-//insert picture of log in
+
 
 Then you are in the main menu:
 Here you have some options
