@@ -161,3 +161,49 @@ Special thanks go to:
 - GitHub for streamlining project organization
 - Everyone on Sketchfab for inspiration and actual models!
 - You!
+
+
+## User Guide
+Thank you for your interest in our project. To be able to try it out there are a few things you need to install and set up.
+
+## Set up
+First of all you need to install the SMCE from [SMCE](https://github.com/ItJustWorksTM/smce-gd) 
+Follow the instructions on the github page. 
+
+To clone the project use the guide in the following link [Cloning a repository](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository-from-github/cloning-a-repository).
+
+
+If you installed the SMCE correctly, wou would find a godot folder in your %appdata% directory. Godot\app_userdata\SMCE\mods here you will paste in the mods from the project.
+
+From the root folder go to group-02\godot-resources\mods in these folders you will find pck files. Copy them and paste them within the mods folder in SMCE.
+
+From your node terminal navigate to group-02\smartcar_frontend.
+If this is your first start up type in npm install followed py npm start.
+
+## Using 
+First you have to go to the website type in your name and submit
+
+
+Then you are in the main menu:
+Here you have some options
+- Race
+- Practice
+- Monster Run
+- Leaderboard
+- Race Times
+
+Choose the race option for a race against 3 bots, "Practice" to drive around the city map and "Monster Run" to play the chasing map.
+Lets go to race that's why we	are here right?
+So in the smce you choose the map you want to use in the world.  There will be the default playground, Race Against The Machines, MonsterMap and city map.
+In the emulator, you should select the map you want to play. It should be the same as the button you clicked, to avoid any misunderstandings between the emulator and website.
+
+Have you made your choice?
+
+Awesome! 
+
+Now you can enjoy the race from the website. control the car with w, a, s, d or the arrow keys.
+Good luck!
+
+If there is any questions about how you use the system first read the user manual.
+
+
