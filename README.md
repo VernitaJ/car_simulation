@@ -2,6 +2,8 @@
 
 This is an official labour of love! We, the development team, hope you get to enjoy just how flexible and compatible this library is! With the information provided in this file, you should be able to utilize the library and software to its full potential, or push it beyond! Good luck, and thanks for checking it out!
 
+Here is a link to an introduction video for the system [Group 2 Demo Video] (https://www.youtube.com/watch?v=ILusqXsdHHQ&ab_channel=DrakeAxelrod).
+
 ## Contents
 - [Description](#description)
 - [Justification](#justification)
