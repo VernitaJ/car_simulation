@@ -9,6 +9,8 @@ Here is a link to an introduction video for the system [Group 2 Demo Video](http
 - [Justification](#justification)
 - [Resources](#resources-used)
 - [Developers "get started" guide](#Developers-get-started-guide)
+- [User get started guide](#User-get-started-guide)
+- [User Manual](#user-manual)
 - [Development Team](#development-team)
 - [Special Thanks](#special-thanks)
 
@@ -49,7 +51,6 @@ The functionalities and features present within the software were programming us
 
 The website is developed using both Javascript and react languages.
 
-
 ## Resources Used
 - [SMCE](https://github.com/ItJustWorksTM/smce-gd "SMCE github page")
 - [Arduino IDE](https://www.arduino.cc/en/software "Arduino")
@@ -76,6 +77,49 @@ It is recommended that you create a new folder inside of the [smce_gd] project, 
     For information on how to create a mod please refer to : https://github.com/ItJustWorksTM/smce-gd/wiki/Modding.
 The reason that you need to put the mods inside of the [smce_gd](https://github.com/ItJustWorksTM/smce-gd) project, is because some of the code within the mods expects to modify or interact with code that is in [smce_gd] once you package the mod for use with smce_gd then it becomes self sustained within the parameters of the [smce_gd] mods capabilities.
 The resources used for the maps and and some of the cars are not included in the [group-2](https://github.com/DIT112-V21/group-02) for space purposes but all of the logic and code is, therefore you will have to find and/or create your own models. 
+
+## User get started guide
+Thank you for your interest in our project. To be able to try it out there are a few things you need to install and set up.
+
+First of all you need to install the SMCE from [SMCE](https://github.com/ItJustWorksTM/smce-gd) 
+Follow the instructions on the github page. 
+
+To clone the project use the guide in the following link [Cloning a repository](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository-from-github/cloning-a-repository).
+
+
+If you installed the SMCE correctly, wou would find a godot folder in your %appdata% directory. Godot\app_userdata\SMCE\mods here you will paste in the mods from the project.
+
+From the root folder go to group-02\godot-resources\mods in these folders you will find pck files. Copy them and paste them within the mods folder in SMCE.
+
+From your node terminal navigate to group-02\smartcar_frontend.
+If this is your first start up type in npm install followed py npm start.
+
+## Using 
+First you have to go to the website type in your name and submit
+
+
+Then you are in the main menu:
+Here you have some options
+- Race
+- Practice
+- Monster Run
+- Leaderboard
+- Race Times
+
+Choose the race option for a race against 3 bots, "Practice" to drive around the city map and "Monster Run" to play the chasing map.
+Lets go to race that's why we	are here right?
+So in the smce you choose the map you want to use in the world.  There will be the default playground, Race Against The Machines, MonsterMap and city map.
+In the emulator, you should select the map you want to play. It should be the same as the button you clicked, to avoid any misunderstandings between the emulator and website.
+
+Have you made your choice?
+
+Awesome! 
+
+Now you can enjoy the race from the website. control the car with w, a, s, d or the arrow keys.
+Good luck!
+
+If there is any further questions about how you use the system, please read the user manual.
+
 
 ## User Manual
 __Welcome to the SmartBil system!__
@@ -167,49 +211,4 @@ Special thanks go to:
 - GitHub for streamlining project organization
 - Everyone on Sketchfab for inspiration and actual models!
 - You!
-
-
-## User Guide
-Thank you for your interest in our project. To be able to try it out there are a few things you need to install and set up.
-
-## Set up
-First of all you need to install the SMCE from [SMCE](https://github.com/ItJustWorksTM/smce-gd) 
-Follow the instructions on the github page. 
-
-To clone the project use the guide in the following link [Cloning a repository](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository-from-github/cloning-a-repository).
-
-
-If you installed the SMCE correctly, wou would find a godot folder in your %appdata% directory. Godot\app_userdata\SMCE\mods here you will paste in the mods from the project.
-
-From the root folder go to group-02\godot-resources\mods in these folders you will find pck files. Copy them and paste them within the mods folder in SMCE.
-
-From your node terminal navigate to group-02\smartcar_frontend.
-If this is your first start up type in npm install followed py npm start.
-
-## Using 
-First you have to go to the website type in your name and submit
-
-
-Then you are in the main menu:
-Here you have some options
-- Race
-- Practice
-- Monster Run
-- Leaderboard
-- Race Times
-
-Choose the race option for a race against 3 bots, "Practice" to drive around the city map and "Monster Run" to play the chasing map.
-Lets go to race that's why we	are here right?
-So in the smce you choose the map you want to use in the world.  There will be the default playground, Race Against The Machines, MonsterMap and city map.
-In the emulator, you should select the map you want to play. It should be the same as the button you clicked, to avoid any misunderstandings between the emulator and website.
-
-Have you made your choice?
-
-Awesome! 
-
-Now you can enjoy the race from the website. control the car with w, a, s, d or the arrow keys.
-Good luck!
-
-If there is any questions about how you use the system first read the user manual.
-
 
