@@ -2,7 +2,7 @@
 
 This is an official labour of love! We, the development team, hope you get to enjoy just how flexible and compatible this library is! With the information provided in this file, you should be able to utilize the library and software to its full potential, or push it beyond! Good luck, and thanks for checking it out!
 
-Here is a link to an introduction video for the system [Group 2 Demo Video] (https://www.youtube.com/watch?v=ILusqXsdHHQ&ab_channel=DrakeAxelrod).
+Here is a link to an introduction video for the system [Group 2 Demo Video](https://www.youtube.com/watch?v=ILusqXsdHHQ&ab_channel=DrakeAxelrod).
 
 ## Contents
 - [Description](#description)
@@ -98,6 +98,8 @@ __Racing map__ - Bring out the competitive side of yourself! In a time-trial man
 ![Race Map](/images/racemap.PNG)
 
 __Practice map__ - Perfect to get the hang of the controls in an environment that lets you roam freely. Enjoy the open city-scape and get good!
+
+Please note that the practice map is not included in the main download, and can be downloaded for this [link](https://drive.google.com/file/d/1PTJmyR1Mk6qqpBGV2MGduzahe1sYhC9O/view?usp=sharing).
 
 ![Practice Map](/images/citymap.PNG)
 
